@@ -17,7 +17,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-07-30T02:26:07.754Z">
+<meta property="og:updated_time" content="2019-07-30T07:50:58.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot helloworld">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
@@ -213,7 +213,7 @@
 <h2 id="编辑启动程序"><a href="#编辑启动程序" class="headerlink" title="编辑启动程序"></a>编辑启动程序</h2><p>&emsp;&emsp;文件如下，其中@SpringBootApplication注解表示开启组件扫描和自动配置，注解了@SpringBootApplication的类会启动整个springboot框架。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">package springboot_test;</span><br><span class="line">import org.springframework.boot.SpringApplication;</span><br><span class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class App &#123;</span><br><span class="line">    public static void  main(String[]args)&#123;</span><br><span class="line">        SpringApplication.run(App.class,args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="返回数据"><a href="#返回数据" class="headerlink" title="返回数据"></a>返回数据</h2><p>&emsp;&emsp;搭建controller控制层，添加Hello类来处理请求返回数据。其中注解@ResponseBody是声明返回给请求的是数据而不是页面；注解@GetMapping(“/hello”)映射一个GET请求，等价于@RequestMapping(value = “/hello”,method = RequestMethod.GET)。</p>
+<h2 id="返回数据"><a href="#返回数据" class="headerlink" title="返回数据"></a>返回数据</h2><p>&emsp;&emsp;搭建controller控制层，添加Hello类来处理请求返回数据。其中注解@RestController是声明返回给请求的是数据而不是页面；注解@GetMapping(“/hello”)映射一个GET请求，等价于@RequestMapping(value = “/hello”,method = RequestMethod.GET)。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package springboot_test.contorller;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	@GetMapping(<span class="string">"/hello"</span>)</span><br><span class="line">	public String <span class="function"><span class="title">hello</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"hello world!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>&emsp;&emsp;启动App.java程序，在浏览器中输入localhost:8080/hello,出现”hello world!”字样，则运行成功。</p>
@@ -303,6 +303,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/30/springboot-select/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot-select
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/18/for you/" id="article-nav-older" class="article-nav-link-wrap">
@@ -481,14 +490,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo框架</a>
               </li>
              
@@ -497,7 +498,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">yilia主题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,7 +514,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">yilia主题</a>
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>
