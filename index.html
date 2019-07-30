@@ -205,7 +205,7 @@
 <h2 id="配置properties文件"><a href="#配置properties文件" class="headerlink" title="配置properties文件"></a>配置properties文件</h2><p>&emsp;&emsp;在src/main/resources包下新建application.properties文件，内含访问MySQL数据库的配置。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">banner.charset=UTF-8</span><br><span class="line">server.tomcat.uri-encoding=UTF-8</span><br><span class="line">spring.http.encoding.charset=UTF-8</span><br><span class="line">spring.http.encoding.enabled=<span class="literal">true</span></span><br><span class="line">spring.http.encoding.force=<span class="literal">true</span></span><br><span class="line">spring.messages.encoding=UTF-8</span><br><span class="line"></span><br><span class="line">server.port=8083</span><br><span class="line"></span><br><span class="line">spring.datasource.url=jdbc:mysql://数据库地址:3306/<span class="built_in">test</span>?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf8&amp;useSSL=<span class="literal">false</span></span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=123456</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.jdbc.Driver</span><br></pre></td></tr></table></figure>
 
-<h2 id="entity层"><a href="#entity层" class="headerlink" title="entity层"></a>entity层</h2><p>&emsp;&emsp;建立entity实体类层，一个数据库表对应一个实体类，查找的test数据库表如下：<br>(<a href="https://gitee.com/yl1690561739/graph/raw/master/test.png" target="_blank" rel="noopener">https://gitee.com/yl1690561739/graph/raw/master/test.png</a>)<br>创建实体类SelectInfo.java，封装的变量对应表中的参数</p>
+<h2 id="entity层"><a href="#entity层" class="headerlink" title="entity层"></a>entity层</h2><p>&emsp;&emsp;建立entity实体类层，一个数据库表对应一个实体类，查找的test数据库表如下：<br><img src="https://gitee.com/yl1690561739/graph/raw/master/test.png" alt="test表"><br>创建实体类SelectInfo.java，封装的变量对应表中的参数</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">package springboot_select.entity;</span><br><span class="line"></span><br><span class="line">public class SelectInfo &#123;</span><br><span class="line">	private String id;</span><br><span class="line">	private String name;</span><br><span class="line">	private String sex;</span><br><span class="line">	private String birthday;</span><br><span class="line">	private String address;</span><br><span class="line">	public String <span class="function"><span class="title">getId</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setId(String id) &#123;</span><br><span class="line">		this.id = id;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getSex</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> sex;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setSex(String sex) &#123;</span><br><span class="line">		this.sex = sex;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getBirthday</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> birthday;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setBirthday(String birthday) &#123;</span><br><span class="line">		this.birthday = birthday;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getAddress</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> address;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAddress(String address) &#123;</span><br><span class="line">		this.address = address;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;再创建实体类SelectResult.java，将前一实体类的参数封装成列表形式。</p>
@@ -226,7 +226,7 @@
 <h2 id="controller层"><a href="#controller层" class="headerlink" title="controller层"></a>controller层</h2><p>&emsp;&emsp;搭建controller控制层，添加类SelectController.java来处理请求返回数据。其中注解@RestController是声明返回给请求的是数据而不是页面；注解@RequestMapping(value=”/main”)位于类上面，给类指定路径为main下；注解@PostMapping(“/select”)映射一个POST请求，等价于@RequestMapping(value = “/select”,method = RequestMethod.POST)。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">package springboot_select.controller;</span><br><span class="line"></span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line">import springboot_select.entity.SelectResult;</span><br><span class="line">import springboot_select.service.SelectService;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(value=<span class="string">"/main"</span>)</span><br><span class="line">public class SelectController &#123;</span><br><span class="line">	@Autowired</span><br><span class="line">	private SelectService selectService;</span><br><span class="line">	@PostMapping(<span class="string">"/select"</span>)</span><br><span class="line">	SelectResult <span class="function"><span class="title">selectResult</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> selectService.selectInfo();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>&emsp;&emsp;启动App.java程序，在Postman中输入localhost:8083/main/select,选择POST请求，运行成功，结果如下图所示。<br>(<a href="https://gitee.com/yl1690561739/graph/raw/master/postman.png" target="_blank" rel="noopener">https://gitee.com/yl1690561739/graph/raw/master/postman.png</a>)</p>
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>&emsp;&emsp;启动App.java程序，在Postman中输入localhost:8083/main/select,选择POST请求，运行成功，结果如下图所示。<br><img src="https://gitee.com/yl1690561739/graph/raw/master/postman.png" alt="结果"></p>
 
       
 
@@ -881,6 +881,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
@@ -897,11 +905,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -910,10 +914,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">相册</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
