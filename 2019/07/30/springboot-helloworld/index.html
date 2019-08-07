@@ -17,7 +17,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-07-30T07:50:58.864Z">
+<meta property="og:updated_time" content="2019-08-07T03:12:17.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot helloworld">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
@@ -205,8 +205,8 @@
       
         <p>&emsp;&emsp;学习springboot框架，做一个最简单的helloworld项目。</p>
 <h2 id="配置Maven"><a href="#配置Maven" class="headerlink" title="配置Maven"></a>配置Maven</h2><p>&emsp;&emsp;下载<a href="https://pan.baidu.com/s/14tQH0VKWSU02gCULnB6nIg" target="_blank" rel="noopener">Maven</a>文件，解压。<br>&emsp;&emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin;”<br>&emsp;&emsp;检测是否安装成功。打开cmd.exe，输入命令mvn –version，出现Maven版本号字样则表示成功。</p>
-<h2 id="创建Maven项目"><a href="#创建Maven项目" class="headerlink" title="创建Maven项目"></a>创建Maven项目</h2><p>&emsp;&emsp;名为springboot-test，结构图如下：<br><img src="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt="结构图"></p>
 <a id="more"></a>
+<h2 id="创建Maven项目"><a href="#创建Maven项目" class="headerlink" title="创建Maven项目"></a>创建Maven项目</h2><p>&emsp;&emsp;名为springboot-test，结构图如下：<br><img src="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt="结构图"></p>
 <h2 id="配置pom-xml文件"><a href="#配置pom-xml文件" class="headerlink" title="配置pom.xml文件"></a>配置pom.xml文件</h2><p>&emsp;&emsp;文件如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;project xmlns=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">	xsi:schemaLocation=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span><br><span class="line">	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;groupId&gt;1.0.0&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;springboot-test&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line"> 	&lt;packaging&gt;jar&lt;/packaging&gt;</span><br><span class="line"> 	</span><br><span class="line"> 	&lt;name&gt;springboot-restful&lt;/name&gt;</span><br><span class="line">  	&lt;url&gt;http://maven.apache.org&lt;/url&gt;</span><br><span class="line">  	</span><br><span class="line">  	&lt;properties&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;java.version&gt;1.8&lt;/java.version&gt;</span><br><span class="line">    &lt;mybatis-spring-boot&gt;1.2.0&lt;/mybatis-spring-boot&gt;</span><br><span class="line">  	&lt;/properties&gt;</span><br><span class="line">  	</span><br><span class="line">	&lt;parent&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;1.5.9.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/parent&gt;</span><br><span class="line"> </span><br><span class="line">	&lt;dependencies&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">			&lt;scope&gt;<span class="built_in">test</span>&lt;/scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;</span><br><span class="line">            &lt;optional&gt;<span class="literal">true</span>&lt;/optional&gt; </span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">	&lt;/dependencies&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
 
@@ -506,7 +506,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color3">相册</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,7 +514,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">相册</a>
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -593,14 +593,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme" >
   	  	 
-			<div class="aboutme-wrap"> 
-				<div style="display:;color:LightSkyBlue;"> 
-					<p id="hitokoto" style="margin:0 20px 0 20px;color:GreenYellow;"></p> 
-					<script src="https://v1.hitokoto.cn/?c=a&encode=js&select=%23hitokoto" ></script>
-<p id="js-aboutme" style="margin:0 20px 0 20px;">&lt;br&gt;&lt;br&gt;&lt;br&gt;Buzhibujue&lt;br&gt;&lt;br&gt;侧耳倾听&lt;br&gt;&lt;br&gt;岁月静好</p> 
-				</div> 
-			</div> 
-		
+	<div class="aboutme-wrap"> 
+		<div style="display:;color:LightSkyBlue;"> 
+			<p id="hitokoto" style="margin:0 20px 0 20px;color:GreenYellow;"></p> 
+			<script src="https://v1.hitokoto.cn/?c=a&c=d&encode=js&select=%23hitokoto" ></script>
+			<p id="js-aboutme" style="margin:0 20px 0 20px;">&lt;br&gt;&lt;br&gt;&lt;br&gt;Buzhibujue&lt;br&gt;&lt;br&gt;侧耳倾听&lt;br&gt;&lt;br&gt;岁月静好</p> 
+		</div> 
+	</div> 
+
     	
 </section>
     
