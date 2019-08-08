@@ -176,6 +176,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-json文件的读取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+	
+	
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2019/08/08/json文件的读取/">JSON文件的读取</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/08/json文件的读取/" class="archive-article-date">
+  	<time datetime="2019-08-08T01:45:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;首先简单了解AJAX和JSON。<br>&emsp;&emsp;AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：</p>
+<blockquote>
+<p>XMLHttpRequest 对象 (异步的与服务器交换数据)<br>JavaScript/DOM (信息显示/交互)<br>CSS (给数据定义样式)<br>XML (作为转换数据的格式)</p>
+</blockquote>
+<p>AJAX应用程序与浏览器和平台无关。详见<a href="https://www.runoob.com/ajax/ajax-tutorial.html" target="_blank" rel="noopener">AJAX教程</a>。<br>&emsp;&emsp;JSON=JavaScript Object Notation(JavaScript 对象表示法)，是类似 XML的存储和交换文本信息的语法，即是一种使用JavaScript语法来描述数据对象的表示方法。详见<a href="https://www.runoob.com/json/json-tutorial.html" target="_blank" rel="noopener">JSON教程</a>。<br>&emsp;&emsp;下面是读取json数据的两种情况。</p>
+<h2 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">网站名称: &lt;span id=<span class="string">"jname"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站地址: &lt;span id=<span class="string">"jurl"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var JSONObject= &#123;</span><br><span class="line">		<span class="string">"name"</span>:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">		<span class="string">"url"</span>:<span class="string">"www.runoob.com"</span></span><br><span class="line">	&#125;;</span><br><span class="line">	document.getElementById(<span class="string">"jname"</span>).innerHTML=JSONObject.name </span><br><span class="line">	document.getElementById(<span class="string">"jurl"</span>).innerHTML=JSONObject.url </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="服务端读取"><a href="#服务端读取" class="headerlink" title="服务端读取"></a>服务端读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 20px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt;</span><br><span class="line">	&lt;div style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;</span><br><span class="line">		&lt;p id=<span class="string">"from"</span> style=<span class="string">"margin:10px;text-align:right;color:Salmon;"</span>&gt;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var xmlhttp = new XMLHttpRequest();</span><br><span class="line">			xmlhttp.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    				<span class="keyword">if</span> (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        					yiyan = JSON.parse(this.responseText);</span><br><span class="line">        					document.getElementById(<span class="string">"hitokoto"</span>).innerHTML =yiyan.hitokoto;</span><br><span class="line">					document.getElementById(<span class="string">"from"</span>).innerHTML =<span class="string">"——《"</span>+ yiyan.from+<span class="string">"》"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">			xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;c=c"</span>, <span class="literal">true</span>);</span><br><span class="line">			xmlhttp.send();</span><br><span class="line"></span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;XMLHttpRequest对象用于在后台与服务器交换数据。使用XMLHttpRequest对象可以做到：</p>
+<ul>
+<li>在不重新加载页面的情况下更新网页</li>
+<li>在页面已加载后从服务器请求数据</li>
+<li>在页面已加载后从服务器接收数据</li>
+<li>在后台向服务器发送数据<br>&emsp;&emsp;onreadystatechange用于存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。readyState 属性存有 XMLHttpRequest 的状态信息，从 0 到 4 发生变化：</li>
+<li>0: 请求未初始化</li>
+<li>1: 服务器连接已建立</li>
+<li>2: 请求已接收</li>
+<li>3: 请求处理中</li>
+<li>4: 请求已完成，且响应已就绪<br>status属性表示返回状态，常用的值有：</li>
+<li>200：OK</li>
+<li>404：未找到页面<br>&emsp;&emsp; JSON.parse() 方法可将json数据转换为 JavaScript 对象，responseText为服务器返回的json数据。<br>&emsp;&emsp; 将请求发送到服务器时，使用 XMLHttpRequest 对象的 open() 和 send() 方法。格式为open(method,url,async)，规定请求的类型、URL 以及是否异步处理请求：</li>
+<li>method：请求的类型；GET 或 POST</li>
+<li>url：文件在服务器上的位置</li>
+<li>async：true（异步）或 false（同步）<br>send(string)，将请求发送到服务器，string仅用于 POST 请求，也可省略，GET请求时参数为空。<br>&emsp;&emsp;折腾这个的原因主要是因为博客上之前使用的一言API证书过期了，所以换成了官方的一言API，但是官方的调用方法只能调出正文内容调不出出处，所以找找原因改进一下，在此记下。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">json</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/08/json文件的读取/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-http、https、hsts传输协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -943,14 +1047,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo框架</a>
               </li>
              
@@ -959,7 +1055,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -968,6 +1076,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">相册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
