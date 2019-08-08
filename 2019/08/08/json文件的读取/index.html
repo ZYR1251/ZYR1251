@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T03:17:31.064Z">
+<meta property="og:updated_time" content="2019-08-08T03:45:57.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON文件的读取">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：">
@@ -209,7 +209,7 @@
 <p>AJAX应用程序与浏览器和平台无关。详见<a href="https://www.runoob.com/ajax/ajax-tutorial.html" target="_blank" rel="noopener">AJAX教程</a>。<br>&emsp;&emsp;JSON=JavaScript Object Notation(JavaScript对象表示法)，是类似 XML的存储和交换文本信息的语法，即是一种使用JavaScript语法来描述数据对象的表示方法。详见<a href="https://www.runoob.com/json/json-tutorial.html" target="_blank" rel="noopener">JSON教程</a>。<br>&emsp;&emsp;下面是读取json数据的两种情况。</p>
 <h2 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">网站名称: &lt;span id=<span class="string">"jname"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站地址: &lt;span id=<span class="string">"jurl"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var JSONObject= &#123;</span><br><span class="line">		<span class="string">"name"</span>:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">		<span class="string">"url"</span>:<span class="string">"www.runoob.com"</span></span><br><span class="line">	&#125;;</span><br><span class="line">	document.getElementById(<span class="string">"jname"</span>).innerHTML=JSONObject.name </span><br><span class="line">	document.getElementById(<span class="string">"jurl"</span>).innerHTML=JSONObject.url </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="服务端读取"><a href="#服务端读取" class="headerlink" title="服务端读取"></a>服务端读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 20px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt;</span><br><span class="line">	&lt;div style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;</span><br><span class="line">		&lt;p id=<span class="string">"from"</span> style=<span class="string">"margin:10px;text-align:right;color:Salmon;"</span>&gt;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var xmlhttp = new XMLHttpRequest();</span><br><span class="line">			xmlhttp.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    				<span class="keyword">if</span> (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        				yiyan = JSON.parse(this.responseText);</span><br><span class="line">        				document.getElementById(<span class="string">"hitokoto"</span>).innerHTML =yiyan.hitokoto;</span><br><span class="line">					document.getElementById(<span class="string">"from"</span>).innerHTML =<span class="string">"——《"</span>+ yiyan.from+<span class="string">"》"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">			xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;c=c"</span>, <span class="literal">true</span>);</span><br><span class="line">			xmlhttp.send();</span><br><span class="line"></span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="服务端读取"><a href="#服务端读取" class="headerlink" title="服务端读取"></a>服务端读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 20px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt;</span><br><span class="line">	&lt;div style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;</span><br><span class="line">		&lt;p id=<span class="string">"from"</span> style=<span class="string">"margin:10px;text-align:right;color:Salmon;"</span>&gt;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var xmlhttp = new XMLHttpRequest();</span><br><span class="line">			xmlhttp.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    				<span class="keyword">if</span> (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        				yiyan = JSON.parse(this.responseText);</span><br><span class="line">        				document.getElementById(<span class="string">"hitokoto"</span>).innerHTML =yiyan.hitokoto;</span><br><span class="line">					document.getElementById(<span class="string">"from"</span>).innerHTML =<span class="string">"——《"</span>+ yiyan.from+<span class="string">"》"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">			xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;c=c"</span>, <span class="literal">true</span>);</span><br><span class="line">			xmlhttp.send();</span><br><span class="line"></span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;XMLHttpRequest对象用于在后台与服务器交换数据。使用XMLHttpRequest对象可以做到：</p>
 <blockquote>
@@ -484,19 +484,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,15 +508,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
