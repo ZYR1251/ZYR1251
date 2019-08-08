@@ -198,33 +198,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;首先简单了解AJAX和JSON。<br>&emsp;&emsp;AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：</p>
-<blockquote>
-<p>XMLHttpRequest 对象 (异步的与服务器交换数据)<br>JavaScript/DOM (信息显示/交互)<br>CSS (给数据定义样式)<br>XML (作为转换数据的格式)</p>
-</blockquote>
-<p>AJAX应用程序与浏览器和平台无关。详见<a href="https://www.runoob.com/ajax/ajax-tutorial.html" target="_blank" rel="noopener">AJAX教程</a>。<br>&emsp;&emsp;JSON=JavaScript Object Notation(JavaScript 对象表示法)，是类似 XML的存储和交换文本信息的语法，即是一种使用JavaScript语法来描述数据对象的表示方法。详见<a href="https://www.runoob.com/json/json-tutorial.html" target="_blank" rel="noopener">JSON教程</a>。<br>&emsp;&emsp;下面是读取json数据的两种情况。</p>
-<h2 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">网站名称: &lt;span id=<span class="string">"jname"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站地址: &lt;span id=<span class="string">"jurl"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var JSONObject= &#123;</span><br><span class="line">		<span class="string">"name"</span>:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">		<span class="string">"url"</span>:<span class="string">"www.runoob.com"</span></span><br><span class="line">	&#125;;</span><br><span class="line">	document.getElementById(<span class="string">"jname"</span>).innerHTML=JSONObject.name </span><br><span class="line">	document.getElementById(<span class="string">"jurl"</span>).innerHTML=JSONObject.url </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="服务端读取"><a href="#服务端读取" class="headerlink" title="服务端读取"></a>服务端读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 20px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt;</span><br><span class="line">	&lt;div style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;</span><br><span class="line">		&lt;p id=<span class="string">"from"</span> style=<span class="string">"margin:10px;text-align:right;color:Salmon;"</span>&gt;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">			var xmlhttp = new XMLHttpRequest();</span><br><span class="line">			xmlhttp.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    				<span class="keyword">if</span> (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        					yiyan = JSON.parse(this.responseText);</span><br><span class="line">        					document.getElementById(<span class="string">"hitokoto"</span>).innerHTML =yiyan.hitokoto;</span><br><span class="line">					document.getElementById(<span class="string">"from"</span>).innerHTML =<span class="string">"——《"</span>+ yiyan.from+<span class="string">"》"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">			xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;c=c"</span>, <span class="literal">true</span>);</span><br><span class="line">			xmlhttp.send();</span><br><span class="line"></span><br><span class="line">		&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;XMLHttpRequest对象用于在后台与服务器交换数据。使用XMLHttpRequest对象可以做到：</p>
-<ul>
-<li>在不重新加载页面的情况下更新网页</li>
-<li>在页面已加载后从服务器请求数据</li>
-<li>在页面已加载后从服务器接收数据</li>
-<li>在后台向服务器发送数据<br>&emsp;&emsp;onreadystatechange用于存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。readyState 属性存有 XMLHttpRequest 的状态信息，从 0 到 4 发生变化：</li>
-<li>0: 请求未初始化</li>
-<li>1: 服务器连接已建立</li>
-<li>2: 请求已接收</li>
-<li>3: 请求处理中</li>
-<li>4: 请求已完成，且响应已就绪<br>status属性表示返回状态，常用的值有：</li>
-<li>200：OK</li>
-<li>404：未找到页面<br>&emsp;&emsp; JSON.parse() 方法可将json数据转换为 JavaScript 对象，responseText为服务器返回的json数据。<br>&emsp;&emsp; 将请求发送到服务器时，使用 XMLHttpRequest 对象的 open() 和 send() 方法。格式为open(method,url,async)，规定请求的类型、URL 以及是否异步处理请求：</li>
-<li>method：请求的类型；GET 或 POST</li>
-<li>url：文件在服务器上的位置</li>
-<li>async：true（异步）或 false（同步）<br>send(string)，将请求发送到服务器，string仅用于 POST 请求，也可省略，GET请求时参数为空。<br>&emsp;&emsp;折腾这个的原因主要是因为博客上之前使用的一言API证书过期了，所以换成了官方的一言API，但是官方的调用方法只能调出正文内容调不出出处，所以找找原因改进一下，在此记下。</li>
-</ul>
-
+        <p>&emsp;&emsp;<strong>首先简单了解AJAX和JSON。</strong><br>&emsp;&emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：</p>
+        
+          <a class="article-more-a" href="/2019/08/08/json文件的读取/#more">more >></a>
+        
       
 
       
@@ -302,7 +279,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>&emsp;&emsp;首先了解是这些是什么：<br>HTTP（HyperText Transfer Protocol，超文本传输协议）<br>HTTPS（HTTP Secure 或 HTTP on TLS，超文本传输安全协议）<br>HSTS（HTTP Strict Transport Security，HTTP严格传输安全协议）<br>HTTP 是基础，HTTPS 和 HSTS 都是后来对它进行的安全性升级，传输方式由不安全到安全到更安全。</p>
+        <h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>&emsp;&emsp;<strong>首先了解是这些是什么：</strong><br>HTTP（HyperText Transfer Protocol，超文本传输协议）<br>HTTPS（HTTP Secure 或 HTTP on TLS，超文本传输安全协议）<br>HSTS（HTTP Strict Transport Security，HTTP严格传输安全协议）<br>HTTP 是基础，HTTPS 和 HSTS 都是后来对它进行的安全性升级，传输方式由不安全到安全到更安全。</p>
         
           <a class="article-more-a" href="/2019/08/06/http、https、hsts传输协议/#more">more >></a>
         
@@ -383,7 +360,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="新建Maven项目"><a href="#新建Maven项目" class="headerlink" title="新建Maven项目"></a>新建Maven项目</h2><p>&emsp;&emsp;名为springboot-select，结构如下：<br><img src="https://gitee.com/yl1690561739/graph/raw/master/springboot-select.png" alt="结构图"></p>
+        <h2 id="新建Maven项目"><a href="#新建Maven项目" class="headerlink" title="新建Maven项目"></a>新建Maven项目</h2><p>&emsp;&emsp;<strong>名为springboot-select，结构如下：</strong><br><img src="https://gitee.com/yl1690561739/graph/raw/master/springboot-select.png" alt="结构图"></p>
         
           <a class="article-more-a" href="/2019/07/30/springboot-select/#more">more >></a>
         
@@ -464,7 +441,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;学习springboot框架，做一个最简单的helloworld项目。</p>
+        <p>&emsp;&emsp;<strong>开始学习springboot框架，做一个最简单的helloworld项目。</strong></p>
 <h2 id="配置Maven"><a href="#配置Maven" class="headerlink" title="配置Maven"></a>配置Maven</h2><p>&emsp;&emsp;下载<a href="https://pan.baidu.com/s/14tQH0VKWSU02gCULnB6nIg" target="_blank" rel="noopener">Maven</a>文件，解压。<br>&emsp;&emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin;”<br>&emsp;&emsp;检测是否安装成功。打开cmd.exe，输入命令mvn –version，出现Maven版本号字样则表示成功。</p>
         
           <a class="article-more-a" href="/2019/07/30/springboot-helloworld/#more">more >></a>
@@ -631,7 +608,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;历经沧桑，终于成功给博客添加了相册功能，特留总结。</p>
+        <p>&emsp;&emsp;<strong>历经沧桑，终于成功给博客添加了相册功能，特留总结。</strong></p>
 <h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>&emsp;&emsp;建立picture仓库用来存放图片，创建photos和min_photos两个文件夹。</p>
 <h2 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h2><p>&emsp;&emsp;下载需要的<a href="https://gitee.com/yl1690561739/photos" target="_blank" rel="noopener">文件</a>。在blog/source/目录下创建assets/img/和photos文件夹，将下载文件中的empty.png文件放在新建的img文件夹下，其余文件放在photos文件夹下。</p>
         
@@ -714,7 +691,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;此为hexo框架博客下的yilia主题配置，记录以方便后期修改。</p>
+        <p>&emsp;&emsp;<strong>此为hexo框架博客下的yilia主题配置，记录以方便后期修改。</strong></p>
 <h2 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h2><p>&emsp;&emsp;头像图片放在yilia/source/img目录下，在yilia目录下的_config.yml文件中设置如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /img/11.jpg</span><br></pre></td></tr></table></figure>
         
@@ -797,7 +774,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;此次安装在Windows10系统上完成，在git bash上完成所有命令，在Linux和Mac系统中操作类似。</p>
+        <p>&emsp;&emsp;<strong>此次安装在Windows10系统上完成，在git bash上完成所有命令，在Linux和Mac系统中操作类似。</strong></p>
 <h2 id="工具安装"><a href="#工具安装" class="headerlink" title="工具安装"></a>工具安装</h2><p>&emsp;&emsp;下载安装node，验证是否安装成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v10.16.0</span><br><span class="line">$ npm -v</span><br><span class="line">6.9.0</span><br></pre></td></tr></table></figure>
         
@@ -880,7 +857,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p>&emsp;&emsp;<strong>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</strong></p>
         
           <a class="article-more-a" href="/2019/07/03/hello-world/#more">more >></a>
         
@@ -1039,6 +1016,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
@@ -1055,19 +1040,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1079,19 +1060,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">http、https、hsts</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">tcp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>

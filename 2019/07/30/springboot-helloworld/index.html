@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SpringBoot helloworld | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
+  <meta name="description" content="&amp;emsp;&amp;emsp;开始学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\b">
 <meta name="keywords" content="helloworld,springboot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot helloworld">
 <meta property="og:url" content="http://yoursite.com/2019/07/30/springboot-helloworld/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;开始学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\b">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png">
-<meta property="og:updated_time" content="2019-08-07T03:12:17.866Z">
+<meta property="og:updated_time" content="2019-08-08T03:25:01.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot helloworld">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;开始学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\b">
 <meta name="twitter:image" content="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
@@ -203,7 +203,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;学习springboot框架，做一个最简单的helloworld项目。</p>
+        <p>&emsp;&emsp;<strong>开始学习springboot框架，做一个最简单的helloworld项目。</strong></p>
 <h2 id="配置Maven"><a href="#配置Maven" class="headerlink" title="配置Maven"></a>配置Maven</h2><p>&emsp;&emsp;下载<a href="https://pan.baidu.com/s/14tQH0VKWSU02gCULnB6nIg" target="_blank" rel="noopener">Maven</a>文件，解压。<br>&emsp;&emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\bin;”<br>&emsp;&emsp;检测是否安装成功。打开cmd.exe，输入命令mvn –version，出现Maven版本号字样则表示成功。</p>
 <a id="more"></a>
 <h2 id="创建Maven项目"><a href="#创建Maven项目" class="headerlink" title="创建Maven项目"></a>创建Maven项目</h2><p>&emsp;&emsp;名为springboot-test，结构图如下：<br><img src="https://gitee.com/yl1690561739/graph/raw/master/springboot%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt="结构图"></p>
@@ -216,7 +216,7 @@
 <h2 id="返回数据"><a href="#返回数据" class="headerlink" title="返回数据"></a>返回数据</h2><p>&emsp;&emsp;搭建controller控制层，添加Hello类来处理请求返回数据。其中注解@RestController是声明返回给请求的是数据而不是页面；注解@GetMapping(“/hello”)映射一个GET请求，等价于@RequestMapping(value = “/hello”,method = RequestMethod.GET)。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package springboot_test.contorller;</span><br><span class="line"></span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public class Hello &#123;</span><br><span class="line">	@GetMapping(<span class="string">"/hello"</span>)</span><br><span class="line">	public String <span class="function"><span class="title">hello</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"hello world!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>&emsp;&emsp;启动App.java程序，在浏览器中输入localhost:8080/hello,出现”hello world!”字样，则运行成功。</p>
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>&emsp;&emsp;<strong>启动App.java程序，在浏览器中输入localhost:8080/hello,出现”hello world!”字样，则运行成功。</strong></p>
 
       
 
@@ -482,6 +482,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
@@ -498,19 +506,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -522,19 +526,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">http、https、hsts</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">tcp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>
