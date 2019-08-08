@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;此为hexo框架博客下的yilia主题配置，记录以方便后期修改。 设置头像&amp;emsp;&amp;emsp;头像图片放在yilia/source/img目录下，在yilia目录下的_config.yml文件中设置如下: 1avatar: /img/11.jpg">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-07T06:43:19.541Z">
+<meta property="og:updated_time" content="2019-08-08T01:11:56.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yilia主题个性化设置">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;此为hexo框架博客下的yilia主题配置，记录以方便后期修改。 设置头像&amp;emsp;&amp;emsp;头像图片放在yilia/source/img目录下，在yilia目录下的_config.yml文件中设置如下: 1avatar: /img/11.jpg">
@@ -216,7 +216,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span>(theme.aboutme)&#123;%&gt;</span><br><span class="line">	&lt;div class=<span class="string">"aboutme-wrap"</span> id=<span class="string">"js-aboutme"</span>&gt;</span><br><span class="line">		&lt;%=theme.aboutme%&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
 
 <p>替换为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span>(theme.aboutme)&#123;%&gt; </span><br><span class="line">	&lt;div class=<span class="string">"aboutme-wrap"</span>&gt; </span><br><span class="line">		&lt;div style=<span class="string">"display:;color:LightSkyBlue;"</span>&gt; </span><br><span class="line">			&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 20px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt; </span><br><span class="line">			&lt;script src=<span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;encode=js&amp;select=%23hitokoto"</span> &gt;&lt;/script&gt;</span><br><span class="line">			&lt;p id=<span class="string">"js-aboutme"</span> style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;&lt;%=theme.aboutme%&gt;&lt;/p&gt; </span><br><span class="line">		&lt;/div&gt; </span><br><span class="line">	&lt;/div&gt; </span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span>(theme.aboutme)&#123;%&gt; </span><br><span class="line">	&lt;div class=<span class="string">"aboutme-wrap"</span>&gt; </span><br><span class="line">		&lt;div style=<span class="string">"display:;color:LightSkyBlue;"</span>&gt; </span><br><span class="line">			&lt;p id=<span class="string">"hitokoto"</span> style=<span class="string">"margin:0 10px 0 20px;color:GreenYellow;"</span>&gt;&lt;/p&gt;</span><br><span class="line">			&lt;p id=<span class="string">"from"</span> style=<span class="string">"margin:10px;text-align:right;color:Salmon;"</span>&gt;&lt;/p&gt;</span><br><span class="line">			&lt;script&gt;</span><br><span class="line">				var xmlhttp = new XMLHttpRequest();</span><br><span class="line">				xmlhttp.onreadystatechange = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    					<span class="keyword">if</span> (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        						yiyan = JSON.parse(this.responseText);</span><br><span class="line">        						document.getElementById(<span class="string">"hitokoto"</span>).innerHTML =yiyan.hitokoto;</span><br><span class="line">						document.getElementById(<span class="string">"from"</span>).innerHTML =<span class="string">"——《"</span>+ yiyan.from+<span class="string">"》"</span>;</span><br><span class="line">   					 &#125;</span><br><span class="line">				&#125;;</span><br><span class="line">				xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"https://v1.hitokoto.cn/?c=a&amp;c=d&amp;c=c"</span>, <span class="literal">true</span>);</span><br><span class="line">				xmlhttp.send();</span><br><span class="line">			&lt;/script&gt;</span><br><span class="line">			&lt;p id=<span class="string">"js-aboutme"</span> style=<span class="string">"margin:0 20px 0 20px;"</span>&gt;&lt;%=theme.aboutme%&gt;&lt;/p&gt; </span><br><span class="line">		&lt;/div&gt; </span><br><span class="line">	&lt;/div&gt; </span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="更改右滑板背景色"><a href="#更改右滑板背景色" class="headerlink" title="更改右滑板背景色"></a>更改右滑板背景色</h2><p>&emsp;&emsp;在yilia目录下的_config.yml文件中更改：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slider: ‘linear-gradient(200deg,<span class="comment">#ccc,#000)’</span></span><br></pre></td></tr></table></figure>
@@ -528,19 +528,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -552,15 +552,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">yilia主题</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">相册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -641,9 +641,24 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   	  	 
 	<div class="aboutme-wrap"> 
 		<div style="display:;color:LightSkyBlue;"> 
-			<p id="hitokoto" style="margin:0 20px 0 20px;color:GreenYellow;"></p> 
-			<script src="https://v1.hitokoto.cn/?c=a&c=d&encode=js&select=%23hitokoto" ></script>
-			<p id="js-aboutme" style="margin:0 20px 0 20px;">&lt;br&gt;&lt;br&gt;&lt;br&gt;Buzhibujue&lt;br&gt;&lt;br&gt;侧耳倾听&lt;br&gt;&lt;br&gt;岁月静好</p> 
+
+		<p id="hitokoto" style="margin:0 10px 0 20px;color:GreenYellow;"></p>
+		<p id="from" style="margin:10px;text-align:right;color:Salmon;"></p>
+		<script>
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+    				if (this.readyState == 4 && this.status == 200) {
+        					yiyan = JSON.parse(this.responseText);
+        					document.getElementById("hitokoto").innerHTML =yiyan.hitokoto;
+					document.getElementById("from").innerHTML ="——《"+ yiyan.from+"》";
+    }
+};
+			xmlhttp.open("GET", "https://v1.hitokoto.cn/?c=a&c=d&c=c", true);
+			xmlhttp.send();
+
+		</script>
+
+			<p id="js-aboutme" style="margin:0 20px 0 20px;">&lt;br&gt;&lt;br&gt;&lt;p&gt;Buzhibujue&lt;/p&gt;&lt;br&gt;&lt;p&gt;侧耳倾听&lt;/p&gt;&lt;br&gt;&lt;p&gt;岁月静好&lt;/p&gt;</p> 
 		</div> 
 	</div> 
 
