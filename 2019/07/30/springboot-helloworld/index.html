@@ -9,7 +9,7 @@
   <title>SpringBoot helloworld | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="&amp;emsp;&amp;emsp;开始学习springboot框架，做一个最简单的helloworld项目。 配置Maven&amp;emsp;&amp;emsp;下载Maven文件，解压。&amp;emsp;&amp;emsp;设置环境变量，右键打开我的电脑——属性——高级系统设置——高级——环境变量，编辑path路径为Maven解压文件下bin文件夹的路径，如”D:\Program Files\apache-maven-3.6.1\b">
-<meta name="keywords" content="helloworld,springboot">
+<meta name="keywords" content="springboot,helloworld">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot helloworld">
 <meta property="og:url" content="http://yoursite.com/2019/07/30/springboot-helloworld/index.html">
@@ -193,7 +193,7 @@
       SpringBoot helloworld
     </h1>
   
-
+<p></p>
         
         <a href="/2019/07/30/springboot-helloworld/" class="archive-article-date">
   	<time datetime="2019-07-30T02:01:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
@@ -250,11 +250,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">helloworld</a>
         		</li>
       		
 		</ul>
@@ -467,7 +467,49 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script type="text/javascript" src="/js/clicklove.js"></script>
+
+<!--鼠标特效-->
+<script language="javascript" type="text/javascript" src="https://gitee.com/yl1690561739/graph/raw/master/jquery.min.js"></script>
+<script type = "text/javascript">
+    var mouseSum = 0;
+function s() {
+        return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+    }
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+        var $i = $("<span/>").text(a[mouseSum]);
+        mouseSum = (mouseSum + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": s()
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+}); 
+</script>
+
+<!--评论框特效-->
+<script src="https://gitee.com/yl1690561739/graph/raw/master/activate-power-mode.js"></script>
+<script>
+    POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+    POWERMODE.shake = false; // 控制开启/关闭屏幕震动特效  
+    document.body.addEventListener('input', POWERMODE);
+</script>
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -520,14 +562,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
@@ -544,6 +578,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
@@ -552,7 +594,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color3">相册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -564,15 +610,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">yilia主题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">相册</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">yilia主题</a>
               </li>
             
             <div class="clearfix"></div>
