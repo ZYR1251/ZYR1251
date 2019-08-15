@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JSON文件的读取 | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：">
+  <meta name="description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：  XML">
 <meta name="keywords" content="json,ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSON文件的读取">
 <meta property="og:url" content="http://yoursite.com/2019/08/08/json文件的读取/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：  XML">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T03:45:57.231Z">
+<meta property="og:updated_time" content="2019-08-15T03:52:28.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON文件的读取">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;首先简单了解AJAX和JSON。&amp;emsp;&amp;emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：  XML">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -222,10 +222,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&emsp;&emsp;<strong>首先简单了解AJAX和JSON。</strong><br>&emsp;&emsp;AJAX = Asynchronous JavaScript and XML（异步的JavaScript和XML），是一种用于创建快速动态网页的技术，通过在后台与服务器进行少量数据交换，使网页实现异步更新，在无需重新加载整个网页的情况下更新部分网页。AJAX是基于现有的Internet标准，并且联合使用它们：</p>
-<a id="more"></a>
 <blockquote>
 <p>XMLHttpRequest 对象 (异步的与服务器交换数据)<br>JavaScript/DOM (信息显示/交互)<br>CSS (给数据定义样式)<br>XML (作为转换数据的格式)</p>
 </blockquote>
+<a id="more"></a>
 <p>AJAX应用程序与浏览器和平台无关。详见<a href="https://www.runoob.com/ajax/ajax-tutorial.html" target="_blank" rel="noopener">AJAX教程</a>。<br>&emsp;&emsp;JSON=JavaScript Object Notation(JavaScript对象表示法)，是类似 XML的存储和交换文本信息的语法，即是一种使用JavaScript语法来描述数据对象的表示方法。详见<a href="https://www.runoob.com/json/json-tutorial.html" target="_blank" rel="noopener">JSON教程</a>。<br>&emsp;&emsp;下面是读取json数据的两种情况。</p>
 <h2 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">网站名称: &lt;span id=<span class="string">"jname"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站地址: &lt;span id=<span class="string">"jurl"</span>&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var JSONObject= &#123;</span><br><span class="line">		<span class="string">"name"</span>:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">		<span class="string">"url"</span>:<span class="string">"www.runoob.com"</span></span><br><span class="line">	&#125;;</span><br><span class="line">	document.getElementById(<span class="string">"jname"</span>).innerHTML=JSONObject.name </span><br><span class="line">	document.getElementById(<span class="string">"jurl"</span>).innerHTML=JSONObject.url </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
@@ -585,19 +585,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">helloworld</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
