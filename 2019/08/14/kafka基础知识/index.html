@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: yilia主题 | Buzhibujue&#39;s blog</title>
+  <title>Kafka基础知识 | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Buzhibujue&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/yilia主题/index.html">
+  <meta name="description" content="&amp;emsp;&amp;emsp;Kafka，一种高吞吐量的分布式发布订阅消息系统，可以处理消费者规模的网站中的所有动作流数据。 特性 时间复杂度为O(1)的消息持久化能力（时间复杂度是指执行算法所需要的计算工作量，定性描述了该算法的运行时间；而空间复杂度是指执行这个算法所需要的内存空间）； 高吞吐率，支持100K条/秒以上消息的传输； 支持Kafka Server间的消息分区，及分布式消费，同时保证每个P">
+<meta name="keywords" content="kafka,基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/kafka基础知识/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;Kafka，一种高吞吐量的分布式发布订阅消息系统，可以处理消费者规模的网站中的所有动作流数据。 特性 时间复杂度为O(1)的消息持久化能力（时间复杂度是指执行算法所需要的计算工作量，定性描述了该算法的运行时间；而空间复杂度是指执行这个算法所需要的内存空间）； 高吞吐率，支持100K条/秒以上消息的传输； 支持Kafka Server间的消息分区，及分布式消费，同时保证每个P">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/Kafka.png">
+<meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/Kafka%20API.png">
+<meta property="og:updated_time" content="2019-08-15T03:33:45.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Buzhibujue&#39;s blog">
+<meta name="twitter:title" content="Kafka基础知识">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;Kafka，一种高吞吐量的分布式发布订阅消息系统，可以处理消费者规模的网站中的所有动作流数据。 特性 时间复杂度为O(1)的消息持久化能力（时间复杂度是指执行算法所需要的计算工作量，定性描述了该算法的运行时间；而空间复杂度是指执行这个算法所需要的内存空间）； 高吞吐率，支持100K条/秒以上消息的传输； 支持Kafka Server间的消息分区，及分布式消费，同时保证每个P">
+<meta name="twitter:image" content="https://gitee.com/yl1690561739/graph/raw/master/Kafka.png">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -174,65 +182,239 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-kafka基础知识" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/15/yilia主题个性化设置/" class="archive-article-date">
-  	<time datetime="2019-07-15T02:22:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
+	
+	
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/15/yilia主题个性化设置/">Yilia主题个性化设置</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      Kafka基础知识
     </h1>
   
+<p></p>
+        
+        <a href="/2019/08/14/kafka基础知识/" class="archive-article-date">
+  	<time datetime="2019-08-14T01:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-14</time>
+</a>
+        
+        
+    <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">695字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
-          
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;<strong>Kafka，一种高吞吐量的分布式发布订阅消息系统，可以处理消费者规模的网站中的所有动作流数据。</strong></p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li>时间复杂度为O(1)的消息持久化能力（时间复杂度是指执行算法所需要的计算工作量，定性描述了该算法的运行时间；而空间复杂度是指执行这个算法所需要的内存空间）；</li>
+<li>高吞吐率，支持100K条/秒以上消息的传输；</li>
+<li>支持Kafka Server间的消息分区，及分布式消费，同时保证每个Partition内的消息顺序传输；</li>
+<li>同时支持离线和实时数据处理；</li>
+<li>支持在线水平扩展。</li>
+</ul>
+<a id="more"></a>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li>Broker：Kafka集群所包含的服务器。</li>
+<li>Topic：发布到Kafka集群上消息的类别。</li>
+<li>Partition：相当于Topic下的分区。</li>
+<li>Producer：生产者，发布消息到Kafka Broker。</li>
+<li>Consumer：消费者，向Kafka Broker读取消息的客户端。</li>
+<li>Consumer Group：每一个consumer属于一个特定的Consumer Group，不指定名字就默认为group,每个group可以订阅多个topic。</li>
+</ul>
+<p><strong><em>备注：生产消息时，生产者(Producer)发布消息到Kafka服务器，这些消息分为不同的主题(Topic)，每个主题又有不同的分区(Patition)，所以实际上消息是存储在分区中；消费消息时，消费者(Consumer)以消费者组(Consumer Group)的名义来订阅主题，消费者来消费各分区的消息。</em></strong><br><img src="https://gitee.com/yl1690561739/graph/raw/master/Kafka.png" alt="Kafka示意图"><br>&emsp;&emsp;Kafka集群里生产者有Server1和Server2两个topic，Server1下有P0、P3两个分区，Server2下有P1、P1两个分区，消费者有Consumer Group A和Consumer Group B两个组，A下有C1、C2两个消费者，B下有C3、C4、C5、C6两个消费者。订阅关系为：</p>
+<blockquote>
+<p>C1 订阅p0,p3，C2 订阅p1,p2<br>C3 订阅p0，C4 订阅p3，C5 订阅p1，C6 订阅p2</p>
+</blockquote>
+<p><em><strong>注：同一个消费者可以消费多个分区的消息，但是同一个分区的消息只能被消费一次，所以会有消费者空闲。</strong></em></p>
+<h2 id="核心API"><a href="#核心API" class="headerlink" title="核心API"></a>核心API</h2><ul>
+<li>应用程序使用producer API发布消息到1或多个topic中。</li>
+<li>应用程序使用consumer API来订阅1或多个topic并处理消息。</li>
+<li>应用程序使用streams API充当一个流处理器,从1个或多个topic消费输入流,并产生一个输出流到1个或多个topic,有效地将输入流转换到输出流。</li>
+<li>connector API允许构建或运行可重复使用的生产者或消费者,将topic链接到现有的应用程序或数据系统。<br><img src="https://gitee.com/yl1690561739/graph/raw/master/Kafka%20API.png" alt="Kafka API"></li>
+</ul>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ul>
+<li>构建可在系统或应用程序之间可靠获取数据的实时流数据管道。</li>
+<li>构建实时流应用程序，可以转换或响应数据流。</li>
+</ul>
+<p>&emsp;&emsp;<strong>未完待续……</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kafka</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">yilia主题</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/14/kafka基础知识/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/08/json文件的读取/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSON文件的读取</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-number">1.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#术语"><span class="toc-number">2.</span> <span class="toc-text">术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#核心API"><span class="toc-number">3.</span> <span class="toc-text">核心API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用场景"><span class="toc-number">4.</span> <span class="toc-text">应用场景</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '86fa7daf6fd354be6bb6',
+  	clientSecret: '7665268e71ccb2e85f306e5e197db2b8926c1270',
+  	repo: 'gitalk',
+  	owner: 'yao1690561739',
+  	admin: ['yao1690561739'],
+  	id: 'Wed Aug 14 2019 09:43:21 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
+  
+
+  
 
           </div>
         </div>
@@ -277,9 +459,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
