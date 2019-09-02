@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Get与Post两种请求方法对比 | Buzhibujue&#39;s blog</title>
+  <title>springboot实现kafka的prodect | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="keywords" content="http,get、post">
+  <meta name="description" content="环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的（replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理大量数据以满足各种需求场景：比如基于hadoop的批处理系统、低延迟的实时系统、storm/Spark流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Get与Post两种请求方法对比">
-<meta property="og:url" content="http://yoursite.com/2019/08/20/get与post两种请求方法对比/index.html">
+<meta property="og:title" content="springboot实现kafka的prodect">
+<meta property="og:url" content="http://yoursite.com/2019/08/21/springboot实现kafka的prodect/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
+<meta property="og:description" content="环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的（replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理大量数据以满足各种需求场景：比如基于hadoop的批处理系统、低延迟的实时系统、storm/Spark流">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
-<meta property="og:updated_time" content="2019-08-20T07:47:46.451Z">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%871.png">
+<meta property="og:updated_time" content="2019-08-27T05:35:39.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Get与Post两种请求方法对比">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="twitter:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
+<meta name="twitter:title" content="springboot实现kafka的prodect">
+<meta name="twitter:description" content="环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的（replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理大量数据以满足各种需求场景：比如基于hadoop的批处理系统、低延迟的实时系统、storm/Spark流">
+<meta name="twitter:image" content="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%871.png">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -180,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-get与post两种请求方法对比" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-springboot实现kafka的prodect" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -189,13 +188,13 @@
 	
   
     <h1 class="article-title_code_ant" itemprop="name">
-      Get与Post两种请求方法对比
+      springboot实现kafka的prodect
     </h1>
   
 <p></p>
         
-        <a href="/2019/08/20/get与post两种请求方法对比/" class="archive-article-date">
-  	<time datetime="2019-08-20T06:59:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/08/21/springboot实现kafka的prodect/" class="archive-article-date">
+  	<time datetime="2019-08-21T05:47:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
 </a>
         
         
@@ -204,7 +203,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">569字</span>
+        <span class="post-count">1.6k字</span>
       </span>
     </span>
 
@@ -213,7 +212,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">8分</span>
       </span>
     </span>
 </div>
@@ -222,9 +221,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;<strong>按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：</strong><br><img src="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png" alt="对比图"></p>
+        <h2 id="环境：eclipse-JDK1-8-0-2-postman-kafka工具-安装kafka的服务器"><a href="#环境：eclipse-JDK1-8-0-2-postman-kafka工具-安装kafka的服务器" class="headerlink" title="环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器"></a>环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器</h2><p>Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的（replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理大量数据以满足各种需求场景：比如基于hadoop的批处理系统、低延迟的实时系统、storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等等，用scala语言编写，Linkedin于2010年贡献给了Apache基金会并成为顶级开源项目。该项目是一个简单的kafka生产。</p>
+<h3 id="新建一个maven项目名为kafkaprodect"><a href="#新建一个maven项目名为kafkaprodect" class="headerlink" title="新建一个maven项目名为kafkaprodect"></a>新建一个maven项目名为kafkaprodect</h3><p>修改配置文件pom.xml为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">&lt;project xmlns=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">  xsi:schemaLocation=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">  &lt;groupId&gt;com.ygxxxb&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;kafkaprodect&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">  &lt;packaging&gt;jar&lt;/packaging&gt;</span><br><span class="line">  &lt;name&gt;ygx-get-bcall&lt;/name&gt;</span><br><span class="line">  &lt;url&gt;http://maven.apache.org&lt;/url&gt;</span><br><span class="line">  &lt;properties&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;java.version&gt;1.7&lt;/java.version&gt;</span><br><span class="line">    &lt;mybatis-spring-boot&gt;1.2.0&lt;/mybatis-spring-boot&gt;</span><br><span class="line">  &lt;/properties&gt; </span><br><span class="line">  &lt;parent&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.5.9.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;relativePath/&gt; </span><br><span class="line"> &lt;/parent&gt;</span><br><span class="line">	</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        </span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">	 &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	 &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">	 &lt;scope&gt;<span class="built_in">test</span>&lt;/scope&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">	</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.codehaus.jackson&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;jackson-mapper-asl&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.9.11&lt;/version&gt;</span><br><span class="line">     &lt;/dependency&gt;</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;</span><br><span class="line">          &lt;optional&gt;<span class="literal">true</span>&lt;/optional&gt; </span><br><span class="line">      &lt;/dependency&gt;  </span><br><span class="line">        </span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">        &lt;!-- Spring Boot Mybatis 依赖 --&gt;</span><br><span class="line">       &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;<span class="variable">$&#123;mybatis-spring-boot&#125;</span>&lt;/version&gt;</span><br><span class="line">       &lt;/dependency&gt;</span><br><span class="line">        &lt;!-- MySQL 连接驱动依赖 --&gt;</span><br><span class="line">       &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">       &lt;/dependency&gt;</span><br><span class="line">        &lt;!-- kafka --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">	 &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt;</span><br><span class="line">	 &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt;</span><br><span class="line">	 &lt;version&gt;1.0.6.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;/dependency&gt;</span><br><span class="line">  &lt;/dependencies&gt;</span><br><span class="line"> &lt;build&gt; </span><br><span class="line">  &lt;plugins&gt; </span><br><span class="line">    &lt;plugin&gt; </span><br><span class="line">      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; </span><br><span class="line">      &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; </span><br><span class="line">      &lt;configuration&gt; </span><br><span class="line">        &lt;fork&gt;<span class="literal">true</span>&lt;/fork&gt; </span><br><span class="line">      &lt;/configuration&gt; </span><br><span class="line">    &lt;/plugin&gt; </span><br><span class="line">  &lt;/plugins&gt; </span><br><span class="line"> &lt;/build&gt; </span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
-<p>&emsp;&emsp;但实际上，由于Get和Post都是基于HTTP协议，而HTTP的底层是TCP/IP，所以实际上Get和Post都是TCP链接。<br>&emsp;&emsp;在请求发送的传输过程中，TCP相当于交通工具，用来传输数据，而HTTP是交通规则，TCP如何传输数据，都要遵循它所给的规则，当TCP执行Get请求时，就要设置method为GET，并且要把数据都放在url中，同理当执行Post请求时，就要设置method为POST，并且把数据放在request body中。但就像人一样，规则是自觉遵守的，Get请求可以把部分数据放在request body中，Post请求也可以把部分数据放在url中，对于传输过程而言，是没有影响的，但就结果而言，可能是会影响的。一些服务器对Get请求的处理方式是只读取url部分的数据，对于request body部分则直接忽略，如果Get请求在request body中也放了部分数据，这部分数据就接收不到。所以，虽然可能对过程没什么影响，但遵守协议的规定是很有必要的。<br>&emsp;&emsp;另外，一般来说，GET产生一个TCP数据包，POST产生两个TCP数据包。对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。所以在响应速度上，GET是比POST有一定优势的，但这并不代表在所有场合中GET都能替换POST，一是GET比POST安全性要差；二是GET与POST都有自己的语义，不能随便混用；三是在网络环境好的情况下，GET对比于POST所提高的响应速度是很少的，而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点，并且并不是所有浏览器都在POST中发送两次包，Firefox就是例外。<br>&emsp;&emsp;<strong>存在即合理，具体情况具体使用，以上。</strong></p>
+<p>在src/main 下建立一个resource文件夹在此文件夹下添加配置文件application.properties，不仅包括数据库连接配置还有kafka的地址、参数配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">banner.charset=UTF-8</span><br><span class="line">server.tomcat.uri-encoding=UTF-8</span><br><span class="line">spring.http.encoding.charset=UTF-8</span><br><span class="line">spring.http.encoding.enabled=<span class="literal">true</span></span><br><span class="line">spring.http.encoding.force=<span class="literal">true</span></span><br><span class="line">spring.messages.encoding=UTF-8</span><br><span class="line">server.port=8083</span><br><span class="line">spring.datasource.url=jdbc:mysql://localhost:3306/ssm?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf8&amp;useSSL=<span class="literal">false</span>&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=<span class="literal">true</span></span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=数据库密码</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver</span><br><span class="line"></span><br><span class="line"><span class="comment">#mybatis.typeAliasesPackage=com.SSM.entity </span></span><br><span class="line"><span class="comment">#mybatis.mapperLocations=classpath\:mapper/*.xml</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#mybatis.typeAliasesPackage=com.pancm.pojo</span></span><br><span class="line"><span class="comment">#mybatis.mapperLocations=classpath\:mapper/*.xml</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#============== kafka ===================</span></span><br><span class="line"><span class="comment">#spring.kafka.bootstrap-servers=127.0.0.1:9092</span></span><br><span class="line">spring.kafka.producer.bootstrap-servers=192.168.19.161:6667</span><br><span class="line"><span class="comment">#=============== provider  =======================</span></span><br><span class="line">spring.kafka.producer.retries=0</span><br><span class="line">spring.kafka.producer.batch-size=16384</span><br><span class="line">spring.kafka.producer.buffer-memory=33554432</span><br><span class="line">spring.kafka.producer.acks=1</span><br><span class="line">spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer</span><br><span class="line">spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer</span><br></pre></td></tr></table></figure>
+
+<p>在src/java/com/kafkaprodect下建立文件夹entity、dao、service、serviceimpl、kafkaprodect、controller  先写一个接口程序从数据库里面取数据</p>
+<h4 id="entity层"><a href="#entity层" class="headerlink" title="entity层"></a>entity层</h4><p>在entity文件夹下建立dept实例定义需要的参数对应数据库表中参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkaprodect.entity;</span><br><span class="line"></span><br><span class="line">public class Dept &#123;</span><br><span class="line">    private String id;</span><br><span class="line">	private String age;</span><br><span class="line">	private String name;</span><br><span class="line">public String <span class="function"><span class="title">getId</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setId(String id) &#123;</span><br><span class="line">		this.id = id;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAge(String age) &#123;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="dao层"><a href="#dao层" class="headerlink" title="dao层"></a>dao层</h4><p>在dao文件夹下建立DeptDao.java，用于访问数据库，用@Mapper注解</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkaprodect.dao;</span><br><span class="line">import java.util.List;</span><br><span class="line">import org.apache.ibatis.annotations.Mapper;</span><br><span class="line">import org.apache.ibatis.annotations.Select;</span><br><span class="line">import com.kafkaprodect.entity.Dept;</span><br><span class="line"></span><br><span class="line">@Mapper</span><br><span class="line">public interface DeptDao &#123;</span><br><span class="line">	@Select(<span class="string">"SELECT id,name,age FROM dept where id=#&#123;id&#125;"</span>)</span><br><span class="line">   List&lt;Dept&gt; findById(String id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="service层"><a href="#service层" class="headerlink" title="service层"></a>service层</h4><p>在service文件夹下建立DeptService.java，业务逻辑层，用于声明需要用到的方法。类型为List<dept><br>否则消费者无法插入数据库</dept></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkaprodect.service;</span><br><span class="line"></span><br><span class="line">import com.kafkaprodect.entity.Dept;</span><br><span class="line"></span><br><span class="line">public interface DeptService &#123;</span><br><span class="line">	List&lt;Dept&gt; findById(String id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="serviceimpl"><a href="#serviceimpl" class="headerlink" title="serviceimpl"></a>serviceimpl</h4><p>在serviceimpl文件夹下建立DeptServiceImpl.java,实现层实现service的所有方法，用@Service注解访问Dao里面的数据库操作构造函数实现service里面的方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkaprodect.serviceimpl;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line">import com.kafkaprodect.dao.DeptDao;</span><br><span class="line">import com.kafkaprodect.entity.Dept;</span><br><span class="line">import com.kafkaprodect.service.DeptService;</span><br><span class="line">@Service</span><br><span class="line">public class DeptResultImpl implements DeptService&#123;</span><br><span class="line">	@Autowired</span><br><span class="line">	private DeptDao deptDao;</span><br><span class="line">	  @Override</span><br><span class="line">	    public List&lt;Dept&gt; findById(String id) &#123; </span><br><span class="line">		   <span class="built_in">return</span> deptDao.findById(id);</span><br><span class="line">	       	    &#125;</span><br><span class="line">	 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="kafkaprodect层"><a href="#kafkaprodect层" class="headerlink" title="kafkaprodect层"></a>kafkaprodect层</h4><p>在kafkaprodect下new一个类名为kafkaprodect.java，写kafka的send程序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkprodect.kafkaprodect;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.kafka.core.KafkaTemplate;</span><br><span class="line">import org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">import org.springframework.util.concurrent.ListenableFuture;</span><br><span class="line">@Component </span><br><span class="line">@EnableScheduling </span><br><span class="line">public class kafkaprodect &#123;</span><br><span class="line">	@Autowired</span><br><span class="line">    private KafkTemplate kafkaTemplate;</span><br><span class="line">	public void send(String topic,String message)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">        	ListenableFuture future = kafkaTemplate.send(topic,message);</span><br><span class="line">			System.out.println(<span class="string">"消息发送成功："</span> + message);</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			// TODO 自动生成的 catch 块</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.out.println(<span class="string">"消息发送失败："</span> + message);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="controller层"><a href="#controller层" class="headerlink" title="controller层"></a>controller层</h4><p>在controller文件夹下建立DeptController.java,控制层，实现业务逻辑。在原有的接口程序中加入数据格式装换和调用kafka的send函数实现从数据库里拿数据并存入到kafka的topic中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package com.kafkaprodect.controller;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.codehaus.jackson.map.ObjectMapper;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line">import com.kafkaprodect.dao.DeptDao;</span><br><span class="line">import com.kafkaprodect.entity.Dept;</span><br><span class="line">import com.kafkaprodect.kafkaprodect.kafkaprodect;</span><br><span class="line">import com.kafkaprodect.service.DeptService;</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(value=<span class="string">"/main"</span>)</span><br><span class="line">public class DeptController &#123;</span><br><span class="line">	@Autowired</span><br><span class="line">	private kafkaprodect kafkaProducer;</span><br><span class="line">	@Autowired</span><br><span class="line">	private DeptService deptService;</span><br><span class="line">	@Autowired</span><br><span class="line">	private DeptDao deptDao;</span><br><span class="line">	@RequestMapping(value = <span class="string">"/findbyid"</span>, method = RequestMethod.GET)</span><br><span class="line">    public List&lt;Dept&gt; findByUserId(@RequestParam(value = <span class="string">"id"</span>, required = <span class="literal">true</span>) String id)</span><br><span class="line">			throws IOException  &#123;</span><br><span class="line">		System.out.println(<span class="string">"数据开始传入kafka"</span>);	</span><br><span class="line">		  Dept result = deptDao.findById(id);	  </span><br><span class="line">		  ObjectMapper om = new ObjectMapper();	  </span><br><span class="line">		  String jsonResult = om.writeValueAsString(result);	  </span><br><span class="line">		  kafkaProducer.send(<span class="string">"KAFKA_TESTZYR"</span>,jsonResult);		 </span><br><span class="line">		<span class="built_in">return</span> deptService.findById(id);		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行程序，在postman中url输入<a href="http://localhost:8083/main/findbyid?id=1发送方式选择GET" target="_blank" rel="noopener">http://localhost:8083/main/findbyid?id=1发送方式选择GET</a><br>就能看到对应数据库里面的数据，在kafka工具对应的的topic中也能看到对应的数据传到了kafka中。<br><img src="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%871.png" alt></p>
 
       
 
@@ -233,21 +257,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">get、post</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -298,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/20/get与post两种请求方法对比/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/21/springboot实现kafka的prodect/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,18 +321,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/21/接口调用-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/23/storm基础/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          springboot实现引用外部接口
+          storm基础
         
       </div>
     </a>
   
   
-    <a href="/2019/07/18/for you/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">For You</div>
+    <a href="/2019/08/21/springboot实现kafka消费/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot实现kafka消费</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -350,7 +359,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境：eclipse-JDK1-8-0-2-postman-kafka工具-安装kafka的服务器"><span class="toc-number">1.</span> <span class="toc-text">环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建一个maven项目名为kafkaprodect"><span class="toc-number">1.1.</span> <span class="toc-text">新建一个maven项目名为kafkaprodect</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#entity层"><span class="toc-number">1.1.1.</span> <span class="toc-text">entity层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dao层"><span class="toc-number">1.1.2.</span> <span class="toc-text">dao层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#service层"><span class="toc-number">1.1.3.</span> <span class="toc-text">service层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#serviceimpl"><span class="toc-number">1.1.4.</span> <span class="toc-text">serviceimpl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kafkaprodect层"><span class="toc-number">1.1.5.</span> <span class="toc-text">kafkaprodect层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#controller层"><span class="toc-number">1.1.6.</span> <span class="toc-text">controller层</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -383,7 +392,7 @@ if(true){
   	repo: 'gitalk',
   	owner: 'ZYR1251',
   	admin: ['ZYR1251'],
-  	id: 'Tue Aug 20 2019 14:59:12 GMT+0800',
+  	id: 'Wed Aug 21 2019 13:47:56 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 

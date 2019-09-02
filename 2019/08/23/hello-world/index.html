@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Get与Post两种请求方法对比 | Buzhibujue&#39;s blog</title>
+  <title>Hello World | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="keywords" content="http,get、post">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Get与Post两种请求方法对比">
-<meta property="og:url" content="http://yoursite.com/2019/08/20/get与post两种请求方法对比/index.html">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2019/08/23/hello-world/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
-<meta property="og:updated_time" content="2019-08-20T07:47:46.451Z">
+<meta property="og:updated_time" content="2019-08-27T05:35:39.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Get与Post两种请求方法对比">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="twitter:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -180,7 +177,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-get与post两种请求方法对比" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -189,13 +186,13 @@
 	
   
     <h1 class="article-title_code_ant" itemprop="name">
-      Get与Post两种请求方法对比
+      Hello World
     </h1>
   
 <p></p>
         
-        <a href="/2019/08/20/get与post两种请求方法对比/" class="archive-article-date">
-  	<time datetime="2019-08-20T06:59:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/08/23/hello-world/" class="archive-article-date">
+  	<time datetime="2019-08-23T08:04:42.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
 </a>
         
         
@@ -204,7 +201,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">569字</span>
+        <span class="post-count">73字</span>
       </span>
     </span>
 
@@ -213,7 +210,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -222,9 +219,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;<strong>按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：</strong><br><img src="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png" alt="对比图"></p>
-<a id="more"></a>
-<p>&emsp;&emsp;但实际上，由于Get和Post都是基于HTTP协议，而HTTP的底层是TCP/IP，所以实际上Get和Post都是TCP链接。<br>&emsp;&emsp;在请求发送的传输过程中，TCP相当于交通工具，用来传输数据，而HTTP是交通规则，TCP如何传输数据，都要遵循它所给的规则，当TCP执行Get请求时，就要设置method为GET，并且要把数据都放在url中，同理当执行Post请求时，就要设置method为POST，并且把数据放在request body中。但就像人一样，规则是自觉遵守的，Get请求可以把部分数据放在request body中，Post请求也可以把部分数据放在url中，对于传输过程而言，是没有影响的，但就结果而言，可能是会影响的。一些服务器对Get请求的处理方式是只读取url部分的数据，对于request body部分则直接忽略，如果Get请求在request body中也放了部分数据，这部分数据就接收不到。所以，虽然可能对过程没什么影响，但遵守协议的规定是很有必要的。<br>&emsp;&emsp;另外，一般来说，GET产生一个TCP数据包，POST产生两个TCP数据包。对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。所以在响应速度上，GET是比POST有一定优势的，但这并不代表在所有场合中GET都能替换POST，一是GET比POST安全性要差；二是GET与POST都有自己的语义，不能随便混用；三是在网络环境好的情况下，GET对比于POST所提高的响应速度是很少的，而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点，并且并不是所有浏览器都在POST中发送两次包，Firefox就是例外。<br>&emsp;&emsp;<strong>存在即合理，具体情况具体使用，以上。</strong></p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
 
@@ -233,21 +240,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">get、post</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -298,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/20/get与post两种请求方法对比/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/23/hello-world/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,18 +304,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/21/接口调用-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          springboot实现引用外部接口
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/18/for you/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">For You</div>
+    <a href="/2019/08/23/storm基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">storm基础</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -350,7 +333,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -383,7 +366,7 @@ if(true){
   	repo: 'gitalk',
   	owner: 'ZYR1251',
   	admin: ['ZYR1251'],
-  	id: 'Tue Aug 20 2019 14:59:12 GMT+0800',
+  	id: 'Fri Aug 23 2019 16:04:42 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 

@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Get与Post两种请求方法对比 | Buzhibujue&#39;s blog</title>
+  <title>storm基础 | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="keywords" content="http,get、post">
+  <meta name="description" content="storm简介：storm是Twitter开源的分布式实时大数据处理框架，最早开源于github，从0.9.1版本之后，归于Apache社区，被业界称为实时版Hadoop。随着越来越多的场景对Hadoop的MapReduce高延迟无法容忍，比如网站统计、推荐系统、预警系统、金融系统(高频交易、股票)等等，大数据实时处理解决方案（流计算）的应用日趋广泛，目前已是分布式技术领域最新爆发点，而Storm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Get与Post两种请求方法对比">
-<meta property="og:url" content="http://yoursite.com/2019/08/20/get与post两种请求方法对比/index.html">
+<meta property="og:title" content="storm基础">
+<meta property="og:url" content="http://yoursite.com/2019/08/23/storm基础/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
+<meta property="og:description" content="storm简介：storm是Twitter开源的分布式实时大数据处理框架，最早开源于github，从0.9.1版本之后，归于Apache社区，被业界称为实时版Hadoop。随着越来越多的场景对Hadoop的MapReduce高延迟无法容忍，比如网站统计、推荐系统、预警系统、金融系统(高频交易、股票)等等，大数据实时处理解决方案（流计算）的应用日趋广泛，目前已是分布式技术领域最新爆发点，而Storm">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
-<meta property="og:updated_time" content="2019-08-20T07:47:46.451Z">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%872.png">
+<meta property="og:updated_time" content="2019-08-27T05:35:39.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Get与Post两种请求方法对比">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：">
-<meta name="twitter:image" content="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png">
+<meta name="twitter:title" content="storm基础">
+<meta name="twitter:description" content="storm简介：storm是Twitter开源的分布式实时大数据处理框架，最早开源于github，从0.9.1版本之后，归于Apache社区，被业界称为实时版Hadoop。随着越来越多的场景对Hadoop的MapReduce高延迟无法容忍，比如网站统计、推荐系统、预警系统、金融系统(高频交易、股票)等等，大数据实时处理解决方案（流计算）的应用日趋广泛，目前已是分布式技术领域最新爆发点，而Storm">
+<meta name="twitter:image" content="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%872.png">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -180,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-get与post两种请求方法对比" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-storm基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -189,13 +188,13 @@
 	
   
     <h1 class="article-title_code_ant" itemprop="name">
-      Get与Post两种请求方法对比
+      storm基础
     </h1>
   
 <p></p>
         
-        <a href="/2019/08/20/get与post两种请求方法对比/" class="archive-article-date">
-  	<time datetime="2019-08-20T06:59:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/08/23/storm基础/" class="archive-article-date">
+  	<time datetime="2019-08-23T07:41:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
 </a>
         
         
@@ -204,7 +203,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">569字</span>
+        <span class="post-count">2.7k字</span>
       </span>
     </span>
 
@@ -213,7 +212,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">10分</span>
       </span>
     </span>
 </div>
@@ -222,9 +221,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;<strong>按使用标准来说，Get和Post是两种不同的HTTP请求方法，对比如下：</strong><br><img src="https://gitee.com/yl1690561739/graph/raw/master/Get-Post.png" alt="对比图"></p>
+        <h2 id="storm简介："><a href="#storm简介：" class="headerlink" title="storm简介："></a>storm简介：</h2><p>storm是Twitter开源的分布式实时大数据处理框架，最早开源于github，从0.9.1版本之后，归于Apache社区，被业界称为实时版Hadoop。随着越来越多的场景对Hadoop的MapReduce高延迟无法容忍，比如网站统计、推荐系统、预警系统、金融系统(高频交易、股票)等等，大数据实时处理解决方案（流计算）的应用日趋广泛，目前已是分布式技术领域最新爆发点，而Storm更是流计算技术中的佼佼者和主流。 </p>
 <a id="more"></a>
-<p>&emsp;&emsp;但实际上，由于Get和Post都是基于HTTP协议，而HTTP的底层是TCP/IP，所以实际上Get和Post都是TCP链接。<br>&emsp;&emsp;在请求发送的传输过程中，TCP相当于交通工具，用来传输数据，而HTTP是交通规则，TCP如何传输数据，都要遵循它所给的规则，当TCP执行Get请求时，就要设置method为GET，并且要把数据都放在url中，同理当执行Post请求时，就要设置method为POST，并且把数据放在request body中。但就像人一样，规则是自觉遵守的，Get请求可以把部分数据放在request body中，Post请求也可以把部分数据放在url中，对于传输过程而言，是没有影响的，但就结果而言，可能是会影响的。一些服务器对Get请求的处理方式是只读取url部分的数据，对于request body部分则直接忽略，如果Get请求在request body中也放了部分数据，这部分数据就接收不到。所以，虽然可能对过程没什么影响，但遵守协议的规定是很有必要的。<br>&emsp;&emsp;另外，一般来说，GET产生一个TCP数据包，POST产生两个TCP数据包。对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。所以在响应速度上，GET是比POST有一定优势的，但这并不代表在所有场合中GET都能替换POST，一是GET比POST安全性要差；二是GET与POST都有自己的语义，不能随便混用；三是在网络环境好的情况下，GET对比于POST所提高的响应速度是很少的，而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点，并且并不是所有浏览器都在POST中发送两次包，Firefox就是例外。<br>&emsp;&emsp;<strong>存在即合理，具体情况具体使用，以上。</strong></p>
+<h2 id="storm的特性："><a href="#storm的特性：" class="headerlink" title="storm的特性："></a>storm的特性：</h2><p>1、适用场景广泛：storm可以实时处理消息和更新DB，对一个数据量进行持续的查询并返回客户端（持续计算），对一个耗资源的查询作实时并行化的处理(分布式方法调用，即DRPC），storm的这些基础API可以满足大量的场景。<br>2、可伸缩性高: Storm的可伸缩性可以让storm每秒可以处理的消息量达到很高。扩展一个实时计算任务，你所需要做的就是加机器并且提高这个计算任务的并行度 。Storm使用ZooKeeper来协调集群内的各种配置使得Storm的集群可以很容易的扩展。<br>3、保证无数据丢失：实时系统必须保证所有的数据被成功的处理。 那些会丢失数据的系统的适用场景非常窄，而storm保证每一条消息都会被处理， 这一点和S4相比有巨大的反差。<br>4、异常健壮： storm集群非常容易管理，轮流重启节点不影响应用。<br>5、容错性好：在消息处理过程中出现异常， storm会进行重试<br>6、语言无关性： Storm的topology和消息处理组件(Bolt)可以用任何语言来定义， 这一点使得任何人都可以使用storm.</p>
+<h2 id="storm应用场景："><a href="#storm应用场景：" class="headerlink" title="storm应用场景："></a>storm应用场景：</h2><p>分布式实时计算，强调实时性，常用于实时性要求较高的地方，根据下单或加入购物车推荐相关商品（而不是相似商品）、金融系统、预警系统、网站统计：实时销量、流量统计。</p>
+<h2 id="Storm的核心组件"><a href="#Storm的核心组件" class="headerlink" title="Storm的核心组件"></a>Storm的核心组件</h2><p>Nimbus：即Storm的Master，负责资源分配和任务调度。一个Storm集群只有一个Nimbus。<br>Supervisor：即Storm的Slave，负责接收Nimbus分配的任务，管理所有Worker，一个Supervisor节点中包含多个Worker进程。<br>Worker：工作进程，每个工作进程中都有多个Task。<br>Task：任务，在 Storm 集群中每个 Spout 和 Bolt 都由若干个任务（tasks）来执行。每个任务都与一个执行线程相对应。<br>Topology：计算拓扑，Storm 的拓扑是对实时计算应用逻辑的封装，它的作用与 MapReduce 的任务（Job）很相似，区别在于 MapReduce 的一个 Job 在得到结果之后总会结束，而拓扑会一直在集群中运行，直到你手动去终止它。拓扑还可以理解成由一系列通过数据流（Stream Grouping）相互关联的 Spout 和 Bolt 组成的的拓扑结构。MapReduce是Map进行获取数据，Reduce进行处理数据。而Topology则是使用Spout获取数据，Bolt来进行计算。总的来说就是一个Topology由一个或者多个的Spout和Bolt组成。<br>Stream：数据流（Streams）是 Storm 中最核心的抽象概念。一个数据流指的是在分布式环境中并行创建、处理的一组元组（tuple）的无界序列。数据流可以由一种能够表述数据流中元组的域（fields）的模式来定义。<br>Spout：数据源（Spout）是拓扑中数据流的来源。一般 Spout 会从一个外部的数据源读取元组然后将他们发送到拓扑中。根据需求的不同，Spout 既可以定义为可靠的数据源，也可以定义为不可靠的数据源。一个可靠的 Spout能够在它发送的元组处理失败时重新发送该元组，以确保所有的元组都能得到正确的处理；相对应的，不可靠的 Spout 就不会在元组发送之后对元组进行任何其他的处理。一个 Spout可以发送多个数据流。<br>Bolt：拓扑中所有的数据处理均是由 Bolt 完成的。通过数据过滤（filtering）、函数处理（functions）、聚合（aggregations）、联结（joins）、数据库交互等功能，Bolt 几乎能够完成任何一种数据处理需求。一个 Bolt 可以实现简单的数据流转换，而更复杂的数据流变换通常需要使用多个 Bolt 并通过多个步骤完成。<br>Stream grouping：为拓扑中的每个 Bolt 的确定输入数据流是定义一个拓扑的重要环节。数据流分组定义了在 Bolt 的不同任务（tasks）中划分数据流的方式。在 Storm 中有八种内置的数据流分组方式。<br>Reliability：可靠性。Storm 可以通过拓扑来确保每个发送的元组都能得到正确处理。通过跟踪由 Spout 发出的每个元组构成的元组树可以确定元组是否已经完成处理。每个拓扑都有一个“消息延时”参数，如果 Storm 在延时时间内没有检测到元组是否处理完成，就会将该元组标记为处理失败，并会在稍后重新发送该元组。<br>Storm程序再Storm集群中运行<br><img src="https://github.com/ZYR1251/photo/blob/master/%E5%9B%BE%E7%89%872.png" alt></p>
+<h2 id="实现流程："><a href="#实现流程：" class="headerlink" title="实现流程："></a>实现流程：</h2><p>在写代码的时候，我们先来明确要用Storm做什么。比如就简单的输出信息。具体步骤如下:<br>1、启动topology，设置好Spout和Bolt。<br>2、将Spout获取的数据传递给Bolt。<br>3、Bolt接受Spout的数据进行打印。</p>
+<h3 id="Spout"><a href="#Spout" class="headerlink" title="Spout"></a>Spout</h3><p>那么首先建立夜歌Spout类。一般是实现 IRichSpout 或继承BaseRichSpout该类，然后实现该方法。比如继承BaseRichSpout这个类,该类需要实现这几个主要的方法:<br>1、open()方法：open()方法是在ISpout接口中定义，在Spout组件初始化时被调用。<br>有三个参数，它们的作用分别是:Storm配置的Map、topology中组件的信息、发射tuple的方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">   public void open(Map map, TopologyContext arg1, SpoutOutputCollector collector) &#123;</span><br><span class="line">       System.out.println(<span class="string">"open:"</span>+map.get(<span class="string">"test"</span>));</span><br><span class="line">       this.collector = collector;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、nextTuple()方法：nextTuple()方法是Spout实现的核心。也就是主要执行方法，用于输出信息,通过collector.emit方法发射。要输出的数据信息已经写死了，就直接将数据进行发送。这里设置只发送两次。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void <span class="function"><span class="title">nextTuple</span></span>() &#123;</span><br><span class="line">        <span class="keyword">if</span>(count&lt;=2)&#123;</span><br><span class="line">            System.out.println(<span class="string">"第"</span>+count+<span class="string">"次开始发送数据..."</span>);</span><br><span class="line">            this.collector.emit(new Values(message));</span><br><span class="line">        &#125;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、declareOutputFields：declareOutputFields是在IComponent接口中定义，用于声明数据格式。即输出的一个Tuple中，包含几个字段。示例只发射一个，所以就指定一个。如果是多个，则用逗号隔开。 private static final String field=”Test”以此为标记便于Bolt接收。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void declareOutputFields(OutputFieldsDeclarer declarer) &#123;</span><br><span class="line">        System.out.println(<span class="string">"定义格式..."</span>);</span><br><span class="line">        declarer.declare(new Fields(field));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、ack：是在ISpout接口中定义，用于表示Tuple处理成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">   public void ack(Object obj) &#123;</span><br><span class="line">       System.out.println(<span class="string">"ack:"</span>+obj);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>5、fail：是在ISpout接口中定义，用于表示Tuple处理失败。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void fail(Object obj) &#123;</span><br><span class="line">        System.out.println(<span class="string">"失败:"</span>+obj);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>6、close：是在ISpout接口中定义，用于表示Topology停止。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">  public void <span class="function"><span class="title">close</span></span>() &#123;</span><br><span class="line">      System.out.println(<span class="string">"关闭..."</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Bolt"><a href="#Bolt" class="headerlink" title="Bolt"></a>Bolt</h3><p>Bolt是用于处理数据的组件，主要是由execute方法来进行实现。一般来说需要实现 IRichBolt 或继承BaseRichBolt该类，然后实现其方法。需要实现方法如下:<br>1、prepare：在Bolt启动前执行，提供Bolt启动环境配置的入口。参数基本和Sqout一样。一般对于不可序列化的对象进行实例化。这里的我们就简单的打印下。注:如果是可以序列化的对象，那么最好是使用构造函数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void prepare(Map map, TopologyContext arg1, OutputCollector collector) &#123;</span><br><span class="line">        System.out.println(<span class="string">"prepare:"</span>+map.get(<span class="string">"test"</span>));</span><br><span class="line">        this.collector=collector;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、execute()方法：是Bolt实现的核心。也就是执行方法，每次Bolt从流接收一个订阅的tuple，都会调用这个方法。从tuple中获取消息可以使用 tuple.getString()和tuple.getStringByField();这两个方法推荐第二种，可以通过field来指定接收的消息。<br>注:如果继承的是IRichBolt，则需要手动ack。这里就不用了,BaseRichBolt会自动帮我们应答。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void execute(Tuple tuple) &#123;</span><br><span class="line">//      String msg=tuple.getString(0);</span><br><span class="line">        String msg=tuple.getStringByField(<span class="string">"Test"</span>);</span><br><span class="line">        //这里我们就不做消息的处理，只打印</span><br><span class="line">        System.out.println(<span class="string">"Bolt第"</span>+count+<span class="string">"接受的消息:"</span>+msg); </span><br><span class="line">        count++;</span><br><span class="line">        /**</span><br><span class="line">         * </span><br><span class="line">         * 没次调用处理一个输入的tuple，所有的tuple都必须在一定时间内应答。</span><br><span class="line">         * 可以是ack或者fail。否则，spout就会重发tuple。</span><br><span class="line">         */</span><br><span class="line">//      collector.ack(tuple);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、declareOutputFields：和Spout的一样。到了这里就不再输出了就什么都没写。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void declareOutputFields(OutputFieldsDeclarer arg0) &#123;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、cleanup：cleanup是IBolt接口中定义,用于释放bolt占用的资源。Storm在终止一个bolt之前会调用这个方法。因为这里没有什么资源需要释放，简单的打印一句就行了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public void <span class="function"><span class="title">cleanup</span></span>() &#123;</span><br><span class="line">        System.out.println(<span class="string">"资源释放"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Topology"><a href="#Topology" class="headerlink" title="Topology"></a>Topology</h3><p>这里用main方法进行提交topology。在提交topology之前需要进行相应的设置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">import org.apache.storm.Config;</span><br><span class="line">import org.apache.storm.LocalCluster;</span><br><span class="line">import org.apache.storm.StormSubmitter;</span><br><span class="line">import org.apache.storm.topology.TopologyBuilder;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * </span><br><span class="line">* Title: App</span><br><span class="line">* Description:</span><br><span class="line">* storm测试 </span><br><span class="line">* Version:1.0.0  </span><br><span class="line">* @author pancm</span><br><span class="line">* @date 2018年3月6日</span><br><span class="line"> */</span><br><span class="line">public class App &#123;</span><br><span class="line">    </span><br><span class="line">    private static final String str1=<span class="string">"test1"</span>; </span><br><span class="line">    private static final String str2=<span class="string">"test2"</span>; </span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)  &#123;</span><br><span class="line">        // TODO Auto-generated method stub</span><br><span class="line">        //定义一个拓扑</span><br><span class="line">        TopologyBuilder builder=new TopologyBuilder();</span><br><span class="line">        //设置一个Executeor(线程)，默认一个</span><br><span class="line">        builder.setSpout(str1, new TestSpout());</span><br><span class="line">        //设置一个Executeor(线程)，和一个task</span><br><span class="line">        builder.setBolt(str2, new TestBolt(),1).setNumTasks(1).shuffleGrouping(str1);</span><br><span class="line">        Config conf = new Config();</span><br><span class="line">        conf.put(<span class="string">"test"</span>, <span class="string">"test"</span>);</span><br><span class="line">        try&#123;</span><br><span class="line">          //运行拓扑</span><br><span class="line">       <span class="keyword">if</span>(args !=null&amp;&amp;args.length&gt;0)&#123; //有参数时，表示向集群提交作业，并把第一个参数当做topology名称</span><br><span class="line">         System.out.println(<span class="string">"远程模式"</span>);</span><br><span class="line">             StormSubmitter.submitTopology(args[0], conf, builder.createTopology());</span><br><span class="line">      &#125; <span class="keyword">else</span>&#123;//没有参数时，本地提交</span><br><span class="line">    //启动本地模式</span><br><span class="line">     System.out.println(<span class="string">"本地模式"</span>);</span><br><span class="line">    LocalCluster cluster = new LocalCluster();</span><br><span class="line">    cluster.submitTopology(<span class="string">"111"</span> ,conf,  builder.createTopology() );</span><br><span class="line">    Thread.sleep(10000);</span><br><span class="line">//  关闭本地集群</span><br><span class="line">    cluster.shutdown();</span><br><span class="line">      &#125;</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行该方法，输出结果如下:</p>
+<p>本地模式<br>定义格式…<br>open:test<br>第1次开始发送数据…<br>第2次开始发送数据…<br>prepare:test<br>Bolt第1接受的消息:这是个测试消息!<br>Bolt第2接受的消息:这是个测试消息!<br>资源释放<br>关闭…</p>
 
       
 
@@ -233,21 +270,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">get、post</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -298,7 +320,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/20/get与post两种请求方法对比/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/23/storm基础/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,18 +334,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/21/接口调用-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/23/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          springboot实现引用外部接口
+          Hello World
         
       </div>
     </a>
   
   
-    <a href="/2019/07/18/for you/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">For You</div>
+    <a href="/2019/08/21/springboot实现kafka的prodect/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot实现kafka的prodect</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -350,7 +372,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#storm简介："><span class="toc-number">1.</span> <span class="toc-text">storm简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storm的特性："><span class="toc-number">2.</span> <span class="toc-text">storm的特性：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storm应用场景："><span class="toc-number">3.</span> <span class="toc-text">storm应用场景：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm的核心组件"><span class="toc-number">4.</span> <span class="toc-text">Storm的核心组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现流程："><span class="toc-number">5.</span> <span class="toc-text">实现流程：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spout"><span class="toc-number">5.1.</span> <span class="toc-text">Spout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bolt"><span class="toc-number">5.2.</span> <span class="toc-text">Bolt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Topology"><span class="toc-number">5.3.</span> <span class="toc-text">Topology</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -383,7 +405,7 @@ if(true){
   	repo: 'gitalk',
   	owner: 'ZYR1251',
   	admin: ['ZYR1251'],
-  	id: 'Tue Aug 20 2019 14:59:12 GMT+0800',
+  	id: 'Fri Aug 23 2019 15:41:50 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
