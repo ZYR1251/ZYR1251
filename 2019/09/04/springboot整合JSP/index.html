@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Buzhibujue&#39;s blog</title>
+  <title>springboot整合JSP | Buzhibujue&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Buzhibujue&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="该程序实现通过前端页面对数据库进行增、删、改、查的操作 环境 JDK1.8 mysql  首先建立一个数据库表“t_user” 创建一个maven工程我直接在之前的ssm项目上进行一些修改。 在pom.xml添加maven依赖">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot整合JSP">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/springboot整合JSP/index.html">
 <meta property="og:site_name" content="Buzhibujue&#39;s blog">
+<meta property="og:description" content="该程序实现通过前端页面对数据库进行增、删、改、查的操作 环境 JDK1.8 mysql  首先建立一个数据库表“t_user” 创建一个maven工程我直接在之前的ssm项目上进行一些修改。 在pom.xml添加maven依赖">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/raw/master/jpa3.png">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/raw/master/jpa4.png">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/raw/master/jsp5.png">
+<meta property="og:updated_time" content="2019-09-04T07:53:45.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Buzhibujue&#39;s blog">
+<meta name="twitter:title" content="springboot整合JSP">
+<meta name="twitter:description" content="该程序实现通过前端页面对数据库进行增、删、改、查的操作 环境 JDK1.8 mysql  首先建立一个数据库表“t_user” 创建一个maven工程我直接在之前的ssm项目上进行一些修改。 在pom.xml添加maven依赖">
+<meta name="twitter:image" content="https://github.com/ZYR1251/photo/raw/master/jpa3.png">
   
     <link rel="alternative" href="/atom.xml" title="Buzhibujue&#39;s blog" type="application/atom+xml">
   
@@ -173,308 +181,215 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="n-springboot整合JSP" class="article article-type-n " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/04/jpa的用法/" class="archive-article-date">
-  	<time datetime="2019-09-04T06:29:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
+	
+	
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/04/jpa的用法/">jpa的用法</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      springboot整合JSP
     </h1>
   
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-n">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/04/springboot整合JSP/" class="archive-article-date">
+<p></p>
+        
+        <a href="/2019/09/04/springboot整合JSP/" class="archive-article-date">
   	<time datetime="2019-09-04T05:48:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/04/springboot整合JSP/">springboot整合JSP</a>
-    </h1>
-  
+        
+        
+    <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">774字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
-          
-          
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3分</span>
+      </span>
+    </span>
+</div>
 
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 该程序实现通过前端页面对数据库进行增、删、改、查的操作</p>
+<h2 id="环境-JDK1-8-mysql"><a href="#环境-JDK1-8-mysql" class="headerlink" title="环境 JDK1.8 mysql"></a>环境 JDK1.8 mysql</h2><p>  首先建立一个数据库表“t_user”<br><img src="https://github.com/ZYR1251/photo/raw/master/jpa3.png" alt></p>
+<h2 id="创建一个maven工程"><a href="#创建一个maven工程" class="headerlink" title="创建一个maven工程"></a>创建一个maven工程</h2><p>我直接在之前的ssm项目上进行一些修改。</p>
+<h2 id="在pom-xml添加maven依赖"><a href="#在pom-xml添加maven依赖" class="headerlink" title="在pom.xml添加maven依赖"></a>在pom.xml添加maven依赖</h2><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--fastjson 相关jar --&gt;</span><br><span class="line">       &lt;dependency&gt;</span><br><span class="line">           &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">           &lt;artifactId&gt;fastjson&lt;/artifactId&gt;</span><br><span class="line">           &lt;version&gt;<span class="variable">$&#123;fastjson&#125;</span>&lt;/version&gt;</span><br><span class="line">       &lt;/dependency&gt;        </span><br><span class="line">               &lt;!--JSP 依赖  --&gt;</span><br><span class="line">       &lt;!-- servlet依赖. --&gt;  </span><br><span class="line">       &lt;dependency&gt;  </span><br><span class="line">           &lt;groupId&gt;javax.servlet&lt;/groupId&gt;  </span><br><span class="line">           &lt;artifactId&gt;jstl&lt;/artifactId&gt;</span><br><span class="line">       &lt;/dependency&gt;    </span><br><span class="line">       &lt;dependency&gt;  </span><br><span class="line">           &lt;groupId&gt;javax.servlet&lt;/groupId&gt;  </span><br><span class="line">           &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">           &lt;scope&gt;provided&lt;/scope&gt;  </span><br><span class="line">       &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="application-properties配置"><a href="#application-properties配置" class="headerlink" title="application.properties配置"></a>application.properties配置</h2><p>在ssm项目的基础上添加JSP的相关配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## JSP配置</span></span><br><span class="line"><span class="comment">#页面默认前缀</span></span><br><span class="line">spring.mvc.view.prefix=/WEB-INF/jsp/</span><br><span class="line"><span class="comment">#响应页面默认后缀</span></span><br><span class="line">spring.mvc.view.suffix=.jsp</span><br></pre></td></tr></table></figure>
+
+<h2 id="常规建立entity、dao、service、serviceimpl、controler层"><a href="#常规建立entity、dao、service、serviceimpl、controler层" class="headerlink" title="常规建立entity、dao、service、serviceimpl、controler层"></a>常规建立entity、dao、service、serviceimpl、controler层</h2><p><img src="https://github.com/ZYR1251/photo/raw/master/jpa4.png" alt><br> entity、dao、service、serviceimpl层与ssm一致，controller层进行了一些修改，下面会讲解。</p>
+<h2 id="jsp页面"><a href="#jsp页面" class="headerlink" title="jsp页面"></a>jsp页面</h2><p>之前在application.properties配置文件中设置了页面的前后缀，前缀是/WEB-INF/jsp/，因此我们在main/webapp/WEB-INF文件夹下建立jsp/user文件夹在此文件夹下建立list.jsp、userAdd.jsp、userEdit.jsp页面<br><img src="https://github.com/ZYR1251/photo/raw/master/jsp5.png" alt><br>页面样式可自行修改，此处只简单显示。具体代码在github中可自行下载就不再一一叙述。</p>
+<h2 id="controller层"><a href="#controller层" class="headerlink" title="controller层"></a>controller层</h2><p>关于控制层，需要给jsp提供接口，之前的@RestController这个注解以json的格式返回数据，但是我们有时候返回的时候需要跳转界面，应该使用Controller这个注解，如果想在某个方法中返回的数据格式是json，应该在该方法上加上@ResponseBody。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">package com.SSM.controller;</span><br><span class="line">import java.util.List;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Controller;</span><br><span class="line">import org.springframework.ui.Model;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import com.SSM.entity.Dept;</span><br><span class="line">import com.SSM.service.DeptService;</span><br><span class="line">@Controller</span><br><span class="line">//@RequestMapping(value = <span class="string">"/api/user"</span>)</span><br><span class="line">public class DeptController &#123;</span><br><span class="line">	@Autowired</span><br><span class="line">	private DeptService deptService;</span><br><span class="line">	@RequestMapping(<span class="string">"/hello"</span>)</span><br><span class="line">    public String <span class="function"><span class="title">hello</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	@RequestMapping(<span class="string">"/"</span>)</span><br><span class="line">    public String <span class="function"><span class="title">index</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"redirect:/list"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	@RequestMapping(<span class="string">"/list"</span>)</span><br><span class="line">    public String list(Model model) &#123;</span><br><span class="line">    	System.out.println(<span class="string">"查询所有"</span>);</span><br><span class="line">        List&lt;Dept&gt; users=deptService.findAll();</span><br><span class="line">       //  model.addAttribute往前台传数据，可以传对象，可以传List，通过el表达式 <span class="variable">$&#123;&#125;</span>可以获取到，</span><br><span class="line">      // 类似于request.setAttribute(<span class="string">"sts"</span>,sts)效果一样。</span><br><span class="line">        model.addAttribute(<span class="string">"users"</span>, users);</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"user/list"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	 @RequestMapping(<span class="string">"/toAdd"</span>)</span><br><span class="line">	    public String <span class="function"><span class="title">toAdd</span></span>() &#123;</span><br><span class="line">	        <span class="built_in">return</span> <span class="string">"user/userAdd"</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	    @RequestMapping(<span class="string">"/add"</span>)</span><br><span class="line">	    public String add(Dept user) &#123;</span><br><span class="line">	        deptService.addUser(user);</span><br><span class="line">	        <span class="built_in">return</span> <span class="string">"redirect:/list"</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	    @RequestMapping(<span class="string">"/toEdit"</span>)</span><br><span class="line">	    public String toEdit(Model model,Long id) &#123;</span><br><span class="line">	        Dept user=deptService.findUserById(id);</span><br><span class="line">	        model.addAttribute(<span class="string">"user"</span>, user);</span><br><span class="line">	        <span class="built_in">return</span> <span class="string">"user/userEdit"</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	    @RequestMapping(<span class="string">"/edit"</span>)</span><br><span class="line">	    public String edit(Dept user) &#123;</span><br><span class="line">	        deptService.updateUser(user);</span><br><span class="line">	        <span class="built_in">return</span> <span class="string">"redirect:/list"</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	    @RequestMapping(<span class="string">"/toDelete"</span>)</span><br><span class="line">	    public String delete(Long id) &#123;</span><br><span class="line">	        deptService.deleteUser(id);</span><br><span class="line">	        <span class="built_in">return</span> <span class="string">"redirect:/list"</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>model.addAttribute往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute(“sts”,sts)效果一样。 return “user/list”;返回到页面list，return “redirect:/list”;重定向到/list，避免写错地址。<br>到此，springboot整合jsp就完成了，运行程序后在浏览器地址栏中输入<a href="http://localhost:8083/list即可看到list页面且可对数据库进行增、删、改、查的操作。" target="_blank" rel="noopener">http://localhost:8083/list即可看到list页面且可对数据库进行增、删、改、查的操作。</a><br>github下载地址：<a href="https://github.com/ZYR1251/ssmjsp" target="_blank" rel="noopener">https://github.com/ZYR1251/ssmjsp</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/04/springboot整合JSP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/02/springboot整合storm和kafka/" class="archive-article-date">
-  	<time datetime="2019-09-02T06:31:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/09/04/jpa的用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          jpa的用法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/02/springboot整合storm和kafka/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot整合storm和kafka</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/02/springboot整合storm和kafka/">springboot整合storm和kafka</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境-JDK1-8-mysql"><span class="toc-number">1.</span> <span class="toc-text">环境 JDK1.8 mysql</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个maven工程"><span class="toc-number">2.</span> <span class="toc-text">创建一个maven工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在pom-xml添加maven依赖"><span class="toc-number">3.</span> <span class="toc-text">在pom.xml添加maven依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#application-properties配置"><span class="toc-number">4.</span> <span class="toc-text">application.properties配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常规建立entity、dao、service、serviceimpl、controler层"><span class="toc-number">5.</span> <span class="toc-text">常规建立entity、dao、service、serviceimpl、controler层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsp页面"><span class="toc-number">6.</span> <span class="toc-text">jsp页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#controller层"><span class="toc-number">7.</span> <span class="toc-text">controller层</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-23T08:04:42.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/23/storm基础/" class="archive-article-date">
-  	<time datetime="2019-08-23T07:41:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/23/storm基础/">storm基础</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/21/springboot实现kafka的prodect/" class="archive-article-date">
-  	<time datetime="2019-08-21T05:47:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/21/springboot实现kafka的prodect/">springboot实现kafka的prodect</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/21/springboot实现kafka消费/" class="archive-article-date">
-  	<time datetime="2019-08-21T05:46:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/21/springboot实现kafka消费/">springboot实现kafka消费</a>
-    </h1>
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '490c9fad533e2ef9cd53',
+  	clientSecret: '25bb3efde2ceeb3a336be16fd0d61f18355f1b7a',
+  	repo: 'gitalk',
+  	owner: 'ZYR1251',
+  	admin: ['ZYR1251'],
+  	id: 'Wed Sep 04 2019 13:48:58 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/21/springboote实现一个api/" class="archive-article-date">
-  	<time datetime="2019-08-21T02:08:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/21/springboote实现一个api/">springboote实现一个api</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/21/接口调用-1/" class="archive-article-date">
-  	<time datetime="2019-08-21T01:55:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/21/接口调用-1/">springboot实现引用外部接口</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/18/for you/" class="archive-article-date">
-  	<time datetime="2019-08-18T04:38:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/18/for you/">For You</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">音乐</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
 
           </div>
         </div>
@@ -519,8 +434,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
