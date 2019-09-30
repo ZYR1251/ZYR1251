@@ -175,6 +175,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-springboot实现hbaseapi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+	
+	
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2019/09/29/springboot实现hbaseapi/">springboot实现hbaseapi</a>
+    </h1>
+  
+<p></p>
+        
+        <a href="/2019/09/29/springboot实现hbaseapi/" class="archive-article-date">
+  	<time datetime="2019-09-29T02:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-29</time>
+</a>
+        
+        
+    <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">3.1k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">17分</span>
+      </span>
+    </span>
+</div>
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前面搭建了一个单机版的hbase，本篇就讲解如何运用springboot完成一个hbase的接口程序。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>jDK1.8 hbase1.2 hadoop2.8 </p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>成功启动hadoop、hbase<br>修改host文件Windows C:\Windows\System32\drivers\etc 目录下的hosts文件，添加hbase的主机ip和主机名做关系映射。<br>192.168.79.6 master（你自己的安装hbase的虚拟机主机和主机名称）<br>注:如果不使用映射，那么将代码中的主机名改成IP即可。（有可能会出问题，所以最好改一下）</p>
+<h2 id="创建maven项目添加相关依赖"><a href="#创建maven项目添加相关依赖" class="headerlink" title="创建maven项目添加相关依赖"></a>创建maven项目添加相关依赖</h2><p>创建一个maven项目并添加hadoop、hbase相关依赖</p>
+        
+          <a class="article-more-a" href="/2019/09/29/springboot实现hbaseapi/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/29/springboot实现hbaseapi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-hbase环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -937,93 +1026,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/21/springboot实现kafka的prodect/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-springboot实现kafka消费" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-	
-	
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2019/08/21/springboot实现kafka消费/">springboot实现kafka消费</a>
-    </h1>
-  
-<p></p>
-        
-        <a href="/2019/08/21/springboot实现kafka消费/" class="archive-article-date">
-  	<time datetime="2019-08-21T05:46:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-        
-        
-    <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.5k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7分</span>
-      </span>
-    </span>
-</div>
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="环境：eclipse-JDK1-8-0-2-postman-kafka工具-安装kafka的服务器"><a href="#环境：eclipse-JDK1-8-0-2-postman-kafka工具-安装kafka的服务器" class="headerlink" title="环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器"></a>环境：eclipse JDK1.8.0.2 postman  kafka工具 安装kafka的服务器</h2><p>该项目是简单的消费kafka的topic中的数据并插入到数据库当中。</p>
-<h2 id="新建一个maven项目名为kafkaconsumer"><a href="#新建一个maven项目名为kafkaconsumer" class="headerlink" title="新建一个maven项目名为kafkaconsumer"></a>新建一个maven项目名为kafkaconsumer</h2><p>修改配置文件pom.xml为</p>
-        
-          <a class="article-more-a" href="/2019/08/21/springboot实现kafka消费/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/21/springboot实现kafka消费/">展开全文 >></a>
         </p>
       
 
