@@ -15,10 +15,13 @@
 <meta property="og:site_name" content="ZYR&#39;s blog">
 <meta property="og:description" content="前面搭建了一个单机版的hbase，本篇就讲解如何运用springboot完成一个hbase的接口程序。 环境jDK1.8 hbase1.2 hadoop2.8  准备工作成功启动hadoop、hbase修改host文件Windows C:\Windows\System32\drivers\etc 目录下的hosts文件，添加hbase的主机ip和主机名做关系映射。192.168.79.6 mast">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T08:58:10.618Z">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/raw/master/hbaseapi1.png">
+<meta property="og:image" content="https://github.com/ZYR1251/photo/raw/master/hbaseapi2.png">
+<meta property="og:updated_time" content="2019-09-30T09:10:04.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot实现hbaseapi">
 <meta name="twitter:description" content="前面搭建了一个单机版的hbase，本篇就讲解如何运用springboot完成一个hbase的接口程序。 环境jDK1.8 hbase1.2 hadoop2.8  准备工作成功启动hadoop、hbase修改host文件Windows C:\Windows\System32\drivers\etc 目录下的hosts文件，添加hbase的主机ip和主机名做关系映射。192.168.79.6 mast">
+<meta name="twitter:image" content="https://github.com/ZYR1251/photo/raw/master/hbaseapi1.png">
   
     <link rel="alternative" href="/atom.xml" title="ZYR&#39;s blog" type="application/atom+xml">
   
@@ -241,7 +244,7 @@
 <h3 id="启动函数"><a href="#启动函数" class="headerlink" title="启动函数"></a>启动函数</h3><p>最后启动函数别忘了，和之前的项目一致</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@EnableTransactionManagement	//启注解事务管理，等同于xml配置方式的 &lt;tx:annotation-driven&gt;</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class App </span><br><span class="line">&#123;</span><br><span class="line">    public static void main( String[] args )</span><br><span class="line">    &#123;</span><br><span class="line">    	SpringApplication.run(App.class, args);</span><br><span class="line">        System.out.println( <span class="string">"Hello World!"</span> );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>前端页面用的是Thymeleaf，代码在源码中有，这里不再一一阐述。<br>github下载地址：<a href="https://github.com/ZYR1251/hbase.git" target="_blank" rel="noopener">https://github.com/ZYR1251/hbase.git</a></p>
+<p>前端页面用的是Thymeleaf，代码在源码中有，这里不再一一阐述。<br>运行程序之后再浏览器输入<a href="http://localhost:8086/hbaseinsert" target="_blank" rel="noopener">http://localhost:8086/hbaseinsert</a><br><img src="https://github.com/ZYR1251/photo/raw/master/hbaseapi1.png" alt><br>浏览器输入<a href="http://localhost:8086/hbaselist" target="_blank" rel="noopener">http://localhost:8086/hbaselist</a><br><img src="https://github.com/ZYR1251/photo/raw/master/hbaseapi2.png" alt><br>github下载地址：<a href="https://github.com/ZYR1251/hbase.git" target="_blank" rel="noopener">https://github.com/ZYR1251/hbase.git</a><br>其中有两个代码，一个是hbaseapi，另外一个是集成kafka、storm、hbase、Thymeleaf。</p>
 
       
 
